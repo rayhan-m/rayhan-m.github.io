@@ -1,0 +1,49 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 23/02/2019 05:41
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("Flaticon.eot");
+  src: url("Flaticond41dd41d.eot?#iefix") format("embedded-opentype"),
+       url("Flaticon.woff2") format("woff2"),
+       url("Flaticon.woff") format("woff"),
+       url("Flaticon.ttf") format("truetype"),
+       url("Flaticon.html#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("Flaticon.html#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+
+<i class="flaticon-photo" aria-hidden="true"></i>
+
+
+.flaticon-home:before { content: "\f100"; }
+.flaticon-grid-world:before { content: "\f101"; }
+.flaticon-whatsapp-logo:before { content: "\f102"; }
+.flaticon-quote:before {
+    content: "\f103";
+    font-size: 40px;
+    color: #000000;
+}
+.flaticon-button:before { content: "\f104"; }
+.flaticon-house-outline:before { content: "\f105"; color:#fff;  }
+.flaticon-check:before { content: "\f106"; color:#fff; }
+.flaticon-curriculum:before { content: "\f107"; color:#fff; }
+.flaticon-photo:before { content: "\f108"; color:#fff;    }
+.flaticon-phone:before { content: "\f109";  color:#fff; }

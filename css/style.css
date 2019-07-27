@@ -1,0 +1,1472 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
+
+/*-------------------------------------
+    Template Name: Devil Personal Portfolio Template
+    Author: Futurethemes
+    Version: 1.0
+	
+---------------------------------------
+    
+    CSS INDEX
+    ===================
+	1. BODY CUSTOM CSS /
+	2. PRELOADER
+	3. NAVIGATION LEFT BAR MENU
+	4. HOME PAGE
+	5. ABOUT PAGE
+	6. RESUME PAGE
+	7. PORTFOLIO PAGE
+	8. CONTACT US PAGE
+	9. HIRE ME POPUP
+
+---------------------------------------*/
+
+
+/*--------------
+1. Body Custom Css Start here
+--------------------------*/
+body,
+html {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px !important;
+	color: #797979;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #ffffff;
+}
+
+body::-webkit-scrollbar {
+	width: 4px;
+	background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #FF7234;
+}
+
+.pt-page::-webkit-scrollbar-thumb {
+	background-color: #FF7234;
+}
+
+.pt-page::-webkit-scrollbar {
+	width: 4px;
+	background-color: #ffffff;
+}
+
+.cv_left_bar::-webkit-scrollbar-thumb {
+	background-color: #ea3457 !important !important;
+}
+
+.cv_left_bar::-webkit-scrollbar {
+	width: 4px;
+	background-color: #ffffff !important;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.1;
+	font-weight: 400;
+	color: #222222;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 !important;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #777;
+}
+
+input,
+select,
+button,
+textarea {
+	outline: none;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+/*--------------
+1.Body Custom Css End here
+--------------------------*/
+
+
+/*--------------
+2.Preloader Css Start here
+--------------------------*/
+
+#preloader {
+	background-color: #fff;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2147483647;
+	width: 100%;
+	height: 100%;
+}
+
+#status {
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+#status img {}
+
+/*--------------
+2.Preloader Css End here
+--------------------------*/
+
+/*--------------
+3.Navigation left bar site menu css start
+--------------------------*/
+
+
+.cv_profile {
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+.my_photo {
+	max-width: 66px;
+	margin: 30px auto 10px;
+}
+
+.my_photo img {
+	border-radius: 50%;
+	width: 100%;
+}
+
+.cv_profile:after {
+	display: block;
+	content: "";
+	width: 18px;
+	height: 18px;
+	background: #39b54a;
+	position: absolute;
+	bottom: -9px;
+	left: 0px;
+	right: 0px;
+	border: 3px solid #fff;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.cv_main_menu {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.cv_main_menu li a {
+	display: block;
+	background-color:#303030;
+	text-decoration: none;
+	padding: 17px 19px;
+	text-align: center;
+	outline: none;
+	position: relative;
+}
+
+.cv_main_menu li a i:before {
+	font-size: 23px;
+}
+
+.active {
+	border-right: 2px solid red;
+}
+
+.site-nav {
+	padding: 12px 0px 5px;
+}
+
+.cv_main_menu li {
+	padding: 0px;
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+.toggle_bar {
+	cursor: pointer;
+}
+
+.toggle_bar:hover {
+	color: #ff724c;
+}
+
+.toggle_bar:focus {
+	color: #ff724c;
+}
+
+.cv_left_bar {
+	width: 90px;
+	z-index: 999999;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	position: fixed;
+	overflow: hidden;
+	overflow-y: auto;
+	left: 46px;
+	height: 100%;
+	background: #303030;
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
+	transform: translateX( -45px);
+	transition: all 0.3s;
+}
+
+.cv_main_menu li:nth-child(1) a:hover:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(1) a:focus:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(2) a:hover:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(2) a:focus:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(3) a:hover:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(3) a:focus:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(4) a:hover:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(4) a:focus:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(4) a:hover:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(4) a:focus:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(5) a:hover:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_main_menu li:nth-child(5) a:focus:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #ffc815;
+	display: block;
+	transform: rotate(90deg);
+	position: absolute;
+	right: -22px;
+	top: 30px;
+}
+
+.cv_bottom_title {
+    width: 149px;
+    margin-left: -25px;
+    margin-top: 5px;
+    margin-bottom: 70px;
+}
+.cv_bottom_title a, .cv_bottom_title a:hover{
+	color:#fff;
+}
+@-moz-document url-prefix() {
+    .cv_bottom_title {
+        margin-left: -28px;
+    }
+}
+
+.cv_bottom_title h4 {
+	transform: rotate(-90deg);
+	font-size: 21px;
+	font-weight: bold;	
+}
+
+.cv_bottom_title span {
+	color: #ffc815;
+}
+
+.cv_bottom_title h4 a img {
+	width: 33px;
+}
+
+
+/*--------------
+3.Navigation left bar site menu css end
+--------------------------*/
+
+
+/*--------------
+4.Home Page CSS Start
+--------------------------*/
+
+.cv_front_page {
+	background: #fff;
+	height: 100%;
+	padding: 40px 5%;
+}
+
+.cv_logo img {
+	width: 200px;
+}
+
+.cv_logo img {
+	width: 170px;
+	margin-left: 22px;
+}
+
+.cv_link {
+	float: right;
+}
+.cv_caption h2{
+	font-size:50px;
+	font-weight:600;
+}
+.cv_caption h2 span {
+	color: #ffc815;
+	padding: 8px 9px 1px 6px;
+	margin-left: -5px;
+}
+
+.cv_caption h1 {
+	font-size: 72px;
+	font-weight: 900;
+}
+
+.cv_caption h1 {
+	font-size: 79px;
+	font-weight: 900;
+	margin-top: 14px;
+	color: #3b3a3a;
+	margin-left: -5px;
+}
+
+.cv_caption h3 {
+	font-weight: 600;
+	margin-top: 0px;
+}
+
+.cv_btn {
+	padding-top: 26px;
+}
+
+.down_btn {
+	background: #ffc815;
+	border: 0px;
+	transition: all 0.4s;
+	padding: 13px 37px;
+	font-size: 13px;
+	line-height: 1.1;
+	box-shadow: 0px 0px 50px 0px #ffce002b;
+	margin-right: 20px;
+	border-radius: 30px;
+	color: #fff;
+}
+
+.port_btn {
+	background: #545454;
+	border-radius: 30px;
+	border: 0px;
+	color: #fff;
+	padding: 13px 37px;
+	font-size: 12px;
+	line-height: 1.1;
+	box-shadow: 0px 0px 50px 0px #54545426;
+}
+
+img.vert-move {
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 1.5s infinite alternate;
+}
+
+img.vert-move {
+	-webkit-animation: mover 1s infinite alternate;
+	animation: mover 1.5s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-15px);
+	}
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-15px);
+	}
+}
+.hvr-grow {
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	transition-duration: 0.3s;
+	transition-property: transform;
+}
+
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
+	transform: scale(1.1);
+	color: #fff;
+	cursor: pointer;
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.cv_right_img img {
+    margin-top: 11px;
+}
+
+.cv_right_img {
+	padding-left: 24px;
+	margin-top: -113px;
+}
+
+.cv_right_img {
+	padding-left: 25px;
+	margin-top: -113px;
+}
+
+.cv_caption {
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: -17px;
+	padding-left: 30px;
+	padding-top: 15px;
+}
+
+.cv_social_wrapper {
+	margin-top: 38px;
+	margin-left: -7px;
+}
+
+ul.social_icon li a {
+	border-radius: 50%;
+	color: #fff;
+	float: left;
+	width: 35px;
+	height: 35px;
+	line-height: 39px;
+	text-align: center;
+	font-size: 18px;
+	margin: 0px 9px;
+}
+
+.fb_icon {
+	background: #ffc815;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.link_icon {
+	background: #ffc815;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.w_icon {
+	background: #ffc815;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.tw_icon {
+	background: #ffc815;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+.i_icon {
+	border-radius: 40px;
+	color: #fff;
+	vertical-align: middle;
+	background: #ffc815;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+
+/*--------------
+4.Home Page CSS End
+--------------------------*/
+
+
+/*--------------
+5.About Me Page CSS Start
+--------------------------*/
+
+.cv_about_me {
+	background: #fff;
+	display: block;
+	padding: 40px 5%;
+}
+
+.cv_about_wrapper h2 {
+	font-size: 72px;
+	font-weight:600;
+	color: #505050;
+	margin-bottom: 0px;
+}
+
+.cv_about_wrapper h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.cv_about_wrapper p {
+	padding-bottom: 20px;
+}
+
+.cv_about_wrapper h4 span {
+    background: #fff;
+    color: #ffaf00;
+    color: #ffaf00;
+    font-size: 25px;
+    position: relative;
+    top: 0px;
+    font-weight: 600;
+}
+
+.cv_about_wrapper {
+	padding: 74px 50px 18px 0px;
+}
+
+.cv_about_wrapper p span {
+	font-weight: 600;
+}
+
+.about_social {
+	margin-top: 5px;
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.about_social li a {
+	margin-right: 2px !important;
+}
+
+.about_social ul li .fb_icon {
+	margin-left: 0px;
+}
+
+.about_social ul li {
+	display: inline-block;
+}
+
+.btn_send {
+	margin-top: 50px;
+}
+
+
+/* about me my services  css start  */
+
+.cv_service_wrapper {
+    background: #f7f7f7;
+    padding: 30px 5% 52px;
+}
+
+.main_hd {
+	color: #505050;
+	font-size: 26px;
+	position: relative;
+	margin: 20px 15px;
+}
+
+.main_hd:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -14px;
+	transform: rotate(180deg);
+	bottom: 0px;
+	width: 3px;
+	height: 39px;
+	background: #ffc815;
+}
+
+.cv_service_inner {
+	background: #fff;
+	text-align: center;
+	padding: 32px 39px 32px 39px;
+	margin-top: 30px;
+}
+
+.cv_service_inner img {
+	width: 83px;
+}
+
+.cv_service_inner h3 {
+	color: #505050;
+	font-weight: 700;
+	font-size: 23px;
+}
+
+.cv_service_box {
+	float: left;
+}
+
+.cv_service_inner:hover {
+	cursor: pointer;
+}
+
+
+/* about me client slider css */
+
+.cv_service_client {
+    background: #000;
+    padding: 30px 5% 30px;
+}
+
+.cv_client_logo img {
+	width: 137px;
+	margin-left: 12px;
+}
+
+.cv_client_logo a:active {
+	text-decoration: none;
+}
+
+.cv_client_logo a:focus {
+	text-decoration: none;
+	color: none;
+	outline: 0px none;
+}
+
+.cv_testimonial_wrapper {
+    padding: 40px 5% 69px;
+    background: #f7f7f7;
+}
+.slick-prev {
+    left: -40px!important;
+    right: 0px!important;
+    margin: 0 auto!important;
+}
+.slick-next {
+    right: -40px !important;
+    left: 0px!important;
+    margin: 0 auto !important;
+}
+.slick-prev, .slick-next {
+    top:100% !important;
+}
+
+.cv_testi_box {
+	background: #fff;
+	text-align: center;
+	padding: 39px 39px 12px 39px;
+	margin-top: 84px;
+	position: relative;
+	opacity: 0.5;
+	transform: scale(0.8);
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.client_circle {
+	top: -86px;
+	z-index: 9999999;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	width: 100px;
+	position: absolute;
+}
+
+.client_circle img {
+	border-radius: 50%;
+	width: 106px;
+}
+.client {
+    padding: 24px 0px 12px 0px;
+}
+
+.cv_testi_wrapper {
+	padding-top: 50px;
+}
+
+.cv_testi_box h3 {
+	font-size: 26px;
+	font-weight: 600;
+	margin-top: 13px;
+}
+
+.cv_testi_box h4 {
+	font-weight: 400;
+	font-size: 16px;
+	margin-top: -4px;
+}
+
+.cv_testi_box p {
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px;
+	padding-top: 0px;
+	font-weight: 300;
+	margin-bottom: 15px !important;
+}
+
+.cv_testi_box h4:after {
+	content: "";
+	border: 0.5px solid #cccbcb;
+	display: block;
+	margin-top: 14px;
+	margin-bottom: 0px;
+}
+
+.slick-current .cv_testi_inner .cv_testi_wrapper .cv_testi_box {
+	background: #fff;
+	opacity: 1;
+	margin-top: 40px;
+	transform: scale(1);
+	transition: all 0.4s ease-in-out 0s;
+	padding-bottom: 30px;
+}
+
+.slick-current .cv_testi_inner .cv_testi_wrapper .cv_testi_box:after {
+	opacity: 1;
+}
+
+
+/* about me awesome fact css */
+
+.cv_awesome_wrapper {
+	padding: 40px 5%;
+	background: #fff;
+}
+
+.counter {
+	animation-duration: 1s;
+	animation-delay: 0s;
+}
+
+.cv_counter img {
+	width: 70px;
+}
+
+.cv_counter h1 {
+	font-weight: 600;
+	margin-top: 3px;
+}
+
+.cv_counter h3 {
+	font-size: 20px;
+	padding-top: 0px;
+	margin-top: 18px;
+	margin-bottom: 10px;
+}
+
+.cv_counter {
+	background: #f7f7f7;
+	padding: 29px;
+	border-radius: 65px 0px 65px 0px;
+	margin-top: 26px;
+	margin-bottom: 14px;
+}
+
+
+/*--------------
+5.About Me Page CSS End
+--------------------------*/
+
+
+/*--------------
+6.Resume Page CSS Start
+--------------------------*/
+
+.cv_resume_wrapper {
+	background: #fff;
+	display: block;
+	padding: 40px 5% 50px;
+}
+
+.cv_education {
+	margin-top: 30px;
+}
+
+.cv_edu_title i {
+	background: #ffc815;
+	font-size: 46px;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	color: #fff;
+	line-height: 80px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 6px;
+}
+
+.edu_box {
+	position: relative;
+	padding: 40px 0px;
+	padding-left: 30px;
+	margin-left: 39px;
+	margin-top: -11px;
+}
+
+.edu_box:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 3px;
+	background: #040404;
+}
+
+.cv_timeline_info {
+	background: #fff;
+	padding: 24px 30px 24px 30px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+}
+
+.cv_timeline_header h3 {
+	font-size: 21px;
+	color:#303030;
+	font-weight:600;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+
+.cv_timeline_header p {
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.cv_timeline_details {
+	padding-top: 10px;
+}
+
+.cv_timeline_date:before {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: -12px;
+	top: 81px;
+	border: 6px solid #ffc815;
+	border: 6px solid #ffc815;
+}
+
+.cv_timeline_date {
+	font-size: 21px;
+	margin-top: 43px;
+	font-weight: 600;
+}
+
+.cv_timeline_date2 {
+	font-size: 21px;
+	margin-top: 1px;
+	font-weight: 600;
+}
+
+.cv_timeline_date2:before {
+	content: "";
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: -12px;
+	top: 41px;
+	border: 6px solid #ffc815;
+}
+
+.resume_down_btn {
+	background: #545454;
+	border-radius: 30px;
+	border: 0px;
+	color: #fff;
+	padding: 13px 37px;
+	font-size: 12px;
+	line-height: 1.1;
+	margin-top: 39px;
+}
+
+.cv_circle_bar h3 {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.cv_skills_wrapper {
+	background: #f1f1f191;
+	display: block;
+	padding: 40px 5%;
+}
+
+.cv_circle_bar {
+	padding-top: 28px;
+}
+
+#doughnut,
+#doughnut2,
+#doughnut3,
+#doughnut4 {
+	position: absolute;
+}
+
+#skill1,
+#skill2,
+#skill3,
+#skill4 {
+	position: relative;
+}
+
+.grid-item {
+	float: left;
+	width: 50px;
+	height: 50px;
+	background: #e6e5e4;
+	border: 2px solid #b6b5b4;
+}
+
+/*--------------
+6.Resume Page CSS End
+--------------------------*/
+
+
+/*--------------
+7.Portfolio Page CSS Start
+--------------------------*/
+
+.cv_port_wrapper {
+	background: #fff;
+	display: block;
+	padding: 40px 5% 50px;
+}
+
+
+/* 10.1  = PORTFOLIO FILTER BUTTONS */
+
+.portfolio .filter-portfolio {
+	margin: 0 auto;
+	margin-bottom: 45px;
+}
+
+.button-group.filter-portfolio {
+	margin: 30px 3px;
+	text-align:left;
+}
+
+.portfolio .filter-portfolio a {
+    color: #232323;
+    cursor: pointer;
+    line-height: 27px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+    padding: 10px 30px 10px 0px;
+    -webkit-transition: ease-out .2s;
+    -moz-transition: ease-out .2s;
+    -o-transition: ease-out .2s;
+    transition: ease-out .2s;
+    font-weight: 600;
+}
+
+
+/* 10.2  = PORTFOLIO PICTURES */
+
+.portfolio .portfolio-item {
+	padding: 0 6px 10px 0;
+	width: 33%;
+}
+a.button.is-checked {
+    color: #ffc815;
+}
+
+.portfolio .portfolio-caption {
+	position: relative;
+}
+
+.portfolio .portfolio-caption img {
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.portfolio .portfolio-caption .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: ease-out .3s;
+	-moz-transition: ease-out .3s;
+	-o-transition: ease-out .3s;
+	transition: ease-out .3s;
+	width: 100%;
+	height: 100%;
+	background: #ffc815e0;
+	opacity: 0;
+}
+
+.portfolio .portfolio-caption .overlay:focus {
+	outline: none;
+}
+
+.portfolio .portfolio-caption .overlay span {
+	color: #FFF;
+}
+
+.portfolio .portfolio-item:hover .overlay {
+	opacity: 1;
+}
+
+.portfolio .portfolio-caption .info-content {
+	position: absolute;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	top: 45%;
+}
+
+.portfolio .portfolio-caption .info-content h4 {
+	color: #FFF;
+	font-size: 20px;
+	margin-bottom: 5px;
+	font-family: 'Dosis', sans-serif;
+}
+
+.portfolio .portfolio-caption .info-content span {
+	margin-bottom: 20px;
+	font-size: 13px;
+}
+
+.portfolio .portfolio-caption:focus,
+.portfolio .portfolio-item:focus,
+.portfolio .portfolio-caption img:focus,
+.portfolio .portfolio-caption a:focus {
+	outline: none;
+}
+
+.port-popup {
+	position: relative;
+	background: #fff;
+	width: auto;
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.port-popup div {
+	padding: 30px;
+	text-align: center;
+}
+
+.port-popup div h3 {
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 400;
+	color: #000;
+}
+
+.port-popup div p {
+	font-size: 14px;
+	text-align: center;
+	line-height: 27px;
+}
+
+.port-popup img {
+	width: 100%;
+	height: auto;
+}
+
+.mfp-close {
+	left: 0;
+}
+
+.mfp-close:hover {
+	color: #FFF;
+}
+
+.mfp-close-btn-in .mfp-close {
+	color: #FFF;
+}
+
+
+/*--------------
+7.Portfolio Page CSS End
+--------------------------*/
+
+
+
+/*--------------
+8.Contact US Page CSS Start
+--------------------------*/
+
+.cv_contact_wrapper {
+	background: #fff;
+	display: block;
+	padding: 40px 5%;
+}
+
+.cv_contact_box {
+    background: #ffc815;
+    display: block;
+    padding: 54px 47px 56px 80px;
+    position: relative;
+}
+
+.right2 {
+    width: 80%;
+    height: 517px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.cont_box {
+	background: #3a3a3a;
+	z-index: 9999999;
+	width: 33%;
+	float: left;
+	margin-top: 47px;
+	padding-bottom: 15px;
+	margin-left: -62px;
+	padding: 0px 30px;
+}
+
+.get_box {
+	width: 73%;
+	background: #fff;
+	float: left;
+	padding-top: 46px;
+	z-index: -1;
+	margin-left: 0px;
+	padding-left: 40px;
+	text-align: center;
+	padding-right: 40px;
+}
+
+.cont_box h4 {
+	color: #fff;
+	text-align: center;
+	padding-top: 25px;
+	font-size: 22px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.cont_box h4:after {
+	content: "";
+	display: block;
+	border: 0.5px solid #fff;
+	width: 80%;
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	margin: 0 auto;
+	bottom: -2px;
+}
+
+.get_box h4 {
+	color: #222;
+	text-align: center;
+	padding-top: 25px;
+	font-size: 22px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.cont_details {
+	padding-top: 16px;
+	padding-left: 10px;
+}
+
+.cont_details i {
+	color: #fff;
+	float: left;
+	margin-right: 20px;
+	font-size: 32px;
+}
+
+.cont_text p {
+	color: #fff;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.cont_details .fa-envelope {
+	font-size: 22px;
+}
+
+.cont_details {
+	padding-top: 18px;
+	padding-left: 10px;
+	padding-bottom: 18px;
+}
+
+.contact_form {
+	padding-top: 40px;
+}
+
+.inp_style {
+	background: none;
+	border: 0px none;
+	box-shadow: none;
+	border-bottom: 1px solid #f1f1f1;
+	border-radius: 0px;
+	padding: 10px;
+	font-weight: 300;
+	font-size: 15px;
+	width: 100%;
+}
+
+.inp_style:focus {
+	border-bottom: 1px solid #ffc815;
+}
+
+
+/*--------------
+8.Contact US Page CSS End
+--------------------------*/
+
+/*--------------
+9.Hire Me Popup CSS Start
+--------------------------*/
+
+.cv_hire_popup p {
+	text-align: center !important;
+}
+
+.cv_hire_popup img {
+	width: 482px;
+}
+
+.cv_hire_popup h3 {
+	margin-top: 33px;
+	font-size: 28px !important;
+}
+
+.cv_hire_popup p {
+	font-weight: 300;
+	font-size: 17px !important;
+	color: #191818;
+}
+
+.cv_hire_popup h3 span {
+	color: #ffc815 !important;
+}
+
+/*--------------
+9.Hire Me Popup CSS End
+--------------------------*/
+
+
+/*progress bar*/
+.skl {
+	margin: 30px 80px;
+}
+
+.progress-title{
+    color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	margin-left: -28px;
+	margin-top: 0px;
+}
+.progress{
+    height: 20px;
+    background:  #fff;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+.progress .progress-bar{
+    box-shadow: none;
+    position: relative;
+    -webkit-animation: animate-positive 5s;
+    animation: animate-positive 5s;
+}
+.progress .progress-bar:after{
+    content: "";
+    display: block;
+    border: 22px solid transparent;
+    border-bottom: 44px solid transparent;
+    position: absolute;
+    top: -46px;
+    right: -10px;
+}
+.progress.black .progress-bar:after{
+    border-bottom-color:  #ffc815 ;
+}
+@-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+	0% { width: 0; }
+
+.single_slide {
+	background-color: #fff;
+	margin: 40px 15px;
+	padding: 15px 10px;
+	cursor: pointer;
+}
+.img-responsive.thumbnail.g-img {
+	width: auto;
+	height: 250px;
+}
