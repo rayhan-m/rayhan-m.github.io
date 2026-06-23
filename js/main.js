@@ -67,7 +67,7 @@ function initTypingEffect() {
   const target = document.getElementById('type-text');
   if (!target) return;
   
-  const roles = ["Software Engineer", "Laravel Developer", "Problem Solver"];
+  const roles = ["Software Engineer Level 3", "Laravel & Node.js Developer", "DevOps & Cloud Engineer"];
   let roleIdx = 0;
   let charIdx = 0;
   let deleting = false;
