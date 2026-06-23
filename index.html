@@ -135,24 +135,64 @@
     <!-- Bento 1: Hero Identity (Spans 2 columns on desktop) -->
     <section id="home" class="bento-card bento-purple md:col-span-2 flex flex-col justify-between">
       <div>
-        <span class="hero-tagline text-xs font-semibold tracking-wider text-purple-500 dark:text-purple-400">WELCOME TO
-          MY PORTFOLIO</span>
+        <!-- Availability Status Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold w-fit mb-4">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          Open to Opportunities / Available for Hire
+        </div>
+
+        <span
+          class="hero-tagline text-xs font-semibold tracking-widest text-purple-500 dark:text-purple-400 block uppercase">WELCOME
+          TO MY PORTFOLIO</span>
         <h1 class="hero-title text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mt-2">Hi, I'm <span
             class="gradient-text">Md. Rayhan Mahmud</span></h1>
+
         <div class="hero-type-row text-lg sm:text-xl font-medium mt-3">
-          <span>A dedicated </span><span id="type-text">Software Engineer Level 3</span><span
+          <span>Specializing in </span><span id="type-text">Software Engineering</span><span
             class="type-cursor">|</span>
         </div>
-        <p class="hero-intro text-slate-600 dark:text-slate-300 mt-4 max-w-xl leading-relaxed">
-          I architect multi-vendor B2B/B2C e-commerce platforms, build robust and secure payment integrations, and
-          design seamless automated DevOps pipelines in the cloud.
+
+        <!-- Tech Stack Micro-Badges -->
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span
+            class="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 text-[10px] font-bold flex items-center gap-1"><i
+              class="fab fa-laravel text-[9px] text-red-500"></i> Laravel</span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 text-[10px] font-bold flex items-center gap-1"><i
+              class="fab fa-react text-[9px] text-cyan-500"></i> React</span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold flex items-center gap-1"><i
+              class="fab fa-node-js text-[9px] text-emerald-500"></i> Node.js</span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-600 dark:text-sky-400 text-[10px] font-bold flex items-center gap-1"><i
+              class="fab fa-aws text-[9px] text-orange-400"></i> AWS</span>
+          <span
+            class="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 text-[10px] font-bold flex items-center gap-1"><i
+              class="fab fa-docker text-[9px] text-blue-400"></i> Docker</span>
+        </div>
+
+        <p class="hero-intro text-slate-600 dark:text-slate-300 mt-5 max-w-xl leading-relaxed">
+          I design and build high-performance backend systems, automate secure cloud infrastructures, and craft seamless digital experiences that solve complex business challenges at scale.
         </p>
       </div>
 
-      <div class="mt-6 flex flex-wrap gap-4">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#" class="btn btn-secondary" download="Md_Rayhan_Mahmud_Resume.pdf"><i class="fas fa-download"></i>
-          Download Resume</a>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#projects" class="group btn btn-primary flex items-center gap-2">
+          View Projects
+          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none"
+            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+          </svg>
+        </a>
+        <a href="#"
+          class="btn btn-secondary flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          download="Md_Rayhan_Mahmud_Resume.pdf">
+          <i class="fas fa-download text-purple-500"></i> Download Resume
+        </a>
       </div>
     </section>
 
@@ -237,14 +277,17 @@
           <!-- Quick Stats Grid -->
           <div class="grid grid-cols-2 gap-2 mt-4 w-full">
             <div
-              class="p-2.5 bg-slate-100/50 dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30 rounded-xl">
-              <span class="block text-lg font-bold text-slate-800 dark:text-white">5+ Yrs</span>
-              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium uppercase">Experience</span>
+              class="p-2.5 bg-slate-100/50 dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30 rounded-xl transition hover:border-indigo-500/30">
+              <span
+                class="block text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">6+
+                Yrs</span>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase">Experience</span>
             </div>
             <div
-              class="p-2.5 bg-slate-100/50 dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30 rounded-xl">
-              <span class="block text-lg font-bold text-slate-800 dark:text-white">15+</span>
-              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium uppercase">Projects</span>
+              class="p-2.5 bg-slate-100/50 dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30 rounded-xl transition hover:border-indigo-500/30">
+              <span
+                class="block text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">15+</span>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase">Projects</span>
             </div>
           </div>
         </div>
@@ -252,16 +295,22 @@
         <!-- Right: Bio & Pillars (8 cols on desktop) -->
         <div class="md:col-span-8 flex flex-col justify-between">
           <div>
-            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-              I am a proactive and results-driven Software Engineer with a B.Sc. in Computing & Information Systems
-              (CGPA: 3.77) from DIU. Over the past 6+ years, I have focused on building scalable web infrastructures,
-              automating deployments, and developing clean API systems that deliver tangible business value.
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
+              I am a results-oriented Software Engineer Level 3 with over 6 years of experience in architecting scalable
+              backend systems, automating cloud deployments, and developing high-performance web applications. Holding a
+              B.Sc. in CIS from DIU, I specialize in PHP Laravel, Node.js, React, and DevOps. I have a proven track
+              record of designing multi-tenant B2B/B2C SaaS platforms, implementing real-time WebSocket communication,
+              integrating secure financial gateways (Stripe, bKash), and automating CI/CD pipelines. Winner of the
+              Growth Leadership Award in 2024, I combine technical expertise with strong team leadership to deliver
+              clean, maintainable code that drives business growth.
             </p>
           </div>
 
           <!-- Expertise Pillars Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            <div class="flex gap-3 items-start">
+            <div
+              class="expertise-pillar flex gap-3 items-start p-3 bg-slate-100/50 dark:bg-slate-800/20 border border-slate-200/50 dark:border-slate-800/50 rounded-xl"
+              style="--pillar-border: rgba(99, 102, 241, 0.4); --pillar-glow: rgba(99, 102, 241, 0.1);">
               <div
                 class="w-8 h-8 rounded-lg bg-indigo-500/10 flex-shrink-0 flex items-center justify-center text-indigo-500">
                 <i class="fas fa-layer-group text-sm"></i>
@@ -273,7 +322,9 @@
               </div>
             </div>
 
-            <div class="flex gap-3 items-start">
+            <div
+              class="expertise-pillar flex gap-3 items-start p-3 bg-slate-100/50 dark:bg-slate-800/20 border border-slate-200/50 dark:border-slate-800/50 rounded-xl"
+              style="--pillar-border: rgba(168, 85, 247, 0.4); --pillar-glow: rgba(168, 85, 247, 0.1);">
               <div
                 class="w-8 h-8 rounded-lg bg-purple-500/10 flex-shrink-0 flex items-center justify-center text-purple-500">
                 <i class="fas fa-cloud text-sm"></i>
@@ -285,7 +336,9 @@
               </div>
             </div>
 
-            <div class="flex gap-3 items-start">
+            <div
+              class="expertise-pillar flex gap-3 items-start p-3 bg-slate-100/50 dark:bg-slate-800/20 border border-slate-200/50 dark:border-slate-800/50 rounded-xl"
+              style="--pillar-border: rgba(6, 182, 212, 0.4); --pillar-glow: rgba(6, 182, 212, 0.1);">
               <div
                 class="w-8 h-8 rounded-lg bg-cyan-500/10 flex-shrink-0 flex items-center justify-center text-cyan-500">
                 <i class="fas fa-robot text-sm"></i>
@@ -297,7 +350,9 @@
               </div>
             </div>
 
-            <div class="flex gap-3 items-start">
+            <div
+              class="expertise-pillar flex gap-3 items-start p-3 bg-slate-100/50 dark:bg-slate-800/20 border border-slate-200/50 dark:border-slate-800/50 rounded-xl"
+              style="--pillar-border: rgba(16, 185, 129, 0.4); --pillar-glow: rgba(16, 185, 129, 0.1);">
               <div
                 class="w-8 h-8 rounded-lg bg-emerald-500/10 flex-shrink-0 flex items-center justify-center text-emerald-500">
                 <i class="fas fa-wallet text-sm"></i>
@@ -326,80 +381,106 @@
         </h2>
       </div>
 
-      <div class="flex flex-col gap-6 mt-2">
-        <div>
-          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Backend & API</h4>
+      <div class="flex flex-col gap-4 mt-2">
+        <!-- Sub-card: Backend & API -->
+        <div class="p-4 bg-slate-50/50 dark:bg-slate-900/10 border border-slate-100/50 dark:border-slate-800/50 rounded-2xl flex flex-col gap-3 transition-colors duration-250 hover:border-emerald-500/20">
+          <h4 class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1.5">
+            <i class="fas fa-server text-emerald-500"></i> Backend & API
+          </h4>
           <div class="flex flex-wrap gap-1.5">
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">PHP
-              (OOP)</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Laravel</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Node.js</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Express.js</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">RESTful
-              Arch</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-php text-indigo-400"></i> PHP (OOP)
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-laravel text-red-500"></i> Laravel
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-node-js text-emerald-500"></i> Node.js
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-bolt text-amber-500"></i> Express.js
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-project-diagram text-cyan-500"></i> RESTful Arch
+            </span>
           </div>
         </div>
 
-        <div>
-          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Frontend & Mobile</h4>
+        <!-- Sub-card: Frontend & Mobile -->
+        <div class="p-4 bg-slate-50/50 dark:bg-slate-900/10 border border-slate-100/50 dark:border-slate-800/50 rounded-2xl flex flex-col gap-3 transition-colors duration-250 hover:border-emerald-500/20">
+          <h4 class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1.5">
+            <i class="fas fa-laptop-code text-emerald-500"></i> Frontend & Mobile
+          </h4>
           <div class="flex flex-wrap gap-1.5">
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">JS
-              (ES6+)</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">TypeScript</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">React.js</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Inertia.js</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Tailwind
-              CSS</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Flutter</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Dart</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-js text-yellow-500"></i> JS (ES6+)
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-code text-blue-400"></i> TypeScript
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-react text-cyan-400"></i> React.js
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-sync-alt text-indigo-500"></i> Inertia.js
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-wind text-sky-400"></i> Tailwind CSS
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-mobile-alt text-blue-500"></i> Flutter
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-location-arrow text-cyan-400"></i> Dart
+            </span>
           </div>
         </div>
 
-        <div>
-          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">DevOps & Database</h4>
+        <!-- Sub-card: DevOps & Database -->
+        <div class="p-4 bg-slate-50/50 dark:bg-slate-900/10 border border-slate-100/50 dark:border-slate-800/50 rounded-2xl flex flex-col gap-3 transition-colors duration-250 hover:border-emerald-500/20">
+          <h4 class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1.5">
+            <i class="fas fa-cloud text-emerald-500"></i> DevOps & Database
+          </h4>
           <div class="flex flex-wrap gap-1.5">
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">AWS
-              (EC2, S3)</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">MySQL</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Docker</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">CI/CD</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Git/GitHub</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Linux/Ubuntu</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-aws text-orange-400"></i> AWS (EC2, S3)
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-database text-blue-400"></i> MySQL
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-docker text-sky-500"></i> Docker
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-infinity text-purple-400"></i> CI/CD
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-github text-slate-800 dark:text-white"></i> Git/GitHub
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fab fa-linux"></i> Linux/Ubuntu
+            </span>
           </div>
         </div>
 
-        <div>
-          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Leadership</h4>
+        <!-- Sub-card: Leadership -->
+        <div class="p-4 bg-slate-50/50 dark:bg-slate-900/10 border border-slate-100/50 dark:border-slate-800/50 rounded-2xl flex flex-col gap-3 transition-colors duration-250 hover:border-emerald-500/20">
+          <h4 class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1.5">
+            <i class="fas fa-users text-emerald-500"></i> Leadership
+          </h4>
           <div class="flex flex-wrap gap-1.5">
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Team
-              Lead</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Client
-              Comm.</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Agile/Scrum</span>
-            <span
-              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Code
-              Reviews</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-users-cog text-indigo-500"></i> Team Lead
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-comments text-cyan-500"></i> Client Comm.
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-running text-emerald-500"></i> Agile/Scrum
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100/80 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/40 text-slate-750 dark:text-slate-205 text-[11px] rounded-xl font-bold shadow-sm transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:border-[var(--card-accent)] dark:hover:border-[var(--card-accent)] hover:shadow-md cursor-default">
+              <i class="fas fa-clipboard-check text-purple-500"></i> Code Reviews
+            </span>
           </div>
         </div>
       </div>
@@ -428,8 +509,11 @@
               </div>
               <div class="text-left">
                 <span class="timeline-inst text-slate-800 dark:text-slate-200 font-bold block leading-tight">Mediusware
-                  Ltd <span class="text-xs text-slate-400 dark:text-slate-500 font-normal ml-1">(Employee
-                    Diary)</span></span>
+                  Ltd <span class="text-xs text-slate-400 dark:text-slate-500 font-normal ml-1">(<button
+                      id="open-promo-btn"
+                      class="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 hover:underline inline-flex items-center gap-1 font-semibold focus:outline-none transition-colors duration-200"
+                      aria-label="Watch Employee Diary promo video"><i class="fab fa-youtube text-red-500"></i> Employee
+                      Diary</button>)</span></span>
                 <span class="text-xs text-slate-400 dark:text-slate-500 block mt-1"><i
                     class="fas fa-map-marker-alt text-[10px] mr-1 text-purple-500"></i> 7th & 8th, 24/1, Taj Mahal Road,
                   Ring Road, Shiya Masjid mor, Dhaka-1207</span>
@@ -536,56 +620,49 @@
 
       <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         <!-- Project 1: Housebrands -->
-        <article class="project-item bento-card bento-indigo p-6 flex flex-col justify-between" data-category="web">
+        <article class="project-item bento-card bento-indigo p-0 overflow-hidden flex flex-col justify-between" data-category="web">
           <div>
-            <!-- Card Top: Logo & Title Row -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex-shrink-0 flex items-center justify-center text-indigo-500 text-xl shadow-[0_0_15px_rgba(99,102,241,0.15)]">
-                <i class="fas fa-home"></i>
-              </div>
-              <div class="text-left">
-                <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest">SaaS / Web App</span>
-                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
-                  Housebrands</h3>
-              </div>
+            <!-- Banner Image Header -->
+            <div class="relative w-full h-36 bg-slate-100 dark:bg-slate-900 overflow-hidden group/banner">
+              <img src="img/projects/housebrands_banner.png" alt="Housebrands Banner" class="w-full h-full object-cover transition-transform duration-500 group-hover/banner:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
+              <span class="absolute top-3 right-3 text-[9px] font-bold text-white bg-slate-900/60 backdrop-blur-md px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/10">SaaS / Web App</span>
             </div>
 
-            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-              A multi-tenant SaaS marketplace and project management platform designed for interior designers, home
-              brands, and clients.
-            </p>
+            <!-- Content Area -->
+            <div class="p-6 pt-8 relative">
+              <!-- Floating Logo -->
+              <div class="absolute -top-7 left-6 w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 flex items-center justify-center text-indigo-500 text-2xl shadow-lg transition-transform duration-300 hover:scale-110">
+                <i class="fas fa-home"></i>
+              </div>
 
-            <!-- Highlights Checklist -->
-            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> AI room
-                decoration generator</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> Kanban boards
-                & billable hour logs</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> Multi-tenant
-                Stripe billing</li>
-            </ul>
+              <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-1 mb-2">
+                Housebrands</h3>
+              <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                A multi-tenant SaaS marketplace and project management platform designed for interior designers, home brands, and clients.
+              </p>
+
+              <!-- Highlights Checklist -->
+              <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> AI room decoration generator</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> Kanban boards & billable hour logs</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> Multi-tenant Stripe billing</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
+          <div class="px-6 pb-6">
             <!-- Tech Tags -->
             <div class="project-tech flex flex-wrap gap-1.5 mb-4">
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel
-                11</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Next.js</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">TypeScript</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">AWS
-                S3</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel 11</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Next.js</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">TypeScript</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">AWS S3</span>
             </div>
 
             <!-- Action Links -->
             <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
-              <a href="#"
-                class="project-link text-xs font-semibold text-slate-400 hover:text-indigo-500 flex items-center gap-1.5 transition">
+              <a href="#" class="project-link text-xs font-semibold text-slate-400 hover:text-indigo-500 flex items-center gap-1.5 transition">
                 <i class="fas fa-info-circle"></i> Details View
               </a>
             </div>
@@ -593,54 +670,49 @@
         </article>
 
         <!-- Project 2: GymNest -->
-        <article class="project-item bento-card bento-purple p-6 flex flex-col justify-between" data-category="web">
+        <article class="project-item bento-card bento-purple p-0 overflow-hidden flex flex-col justify-between" data-category="web">
           <div>
-            <!-- Card Top: Logo & Title Row -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex-shrink-0 flex items-center justify-center text-purple-500 text-xl shadow-[0_0_15px_rgba(168,85,247,0.15)]">
-                <i class="fas fa-dumbbell"></i>
-              </div>
-              <div class="text-left">
-                <span class="text-[10px] font-bold text-purple-500 uppercase tracking-widest">Web Application</span>
-                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
-                  GymNest</h3>
-              </div>
+            <!-- Banner Image Header -->
+            <div class="relative w-full h-36 bg-slate-100 dark:bg-slate-900 overflow-hidden group/banner">
+              <img src="img/projects/gymnest_banner.png" alt="GymNest Banner" class="w-full h-full object-cover transition-transform duration-500 group-hover/banner:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
+              <span class="absolute top-3 right-3 text-[9px] font-bold text-white bg-slate-900/60 backdrop-blur-md px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/10">Web Application</span>
             </div>
 
-            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-              A modern, multi-branch gym management system handling operations, memberships, diet structures, and HR.
-            </p>
+            <!-- Content Area -->
+            <div class="p-6 pt-8 relative">
+              <!-- Floating Logo -->
+              <div class="absolute -top-7 left-6 w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 flex items-center justify-center text-purple-500 text-2xl shadow-lg transition-transform duration-300 hover:scale-110">
+                <i class="fas fa-dumbbell"></i>
+              </div>
 
-            <!-- Highlights Checklist -->
-            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Multi-branch
-                membership tracking</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Gym class,
-                diet & attendance tools</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Business
-                payroll & careers listings</li>
-            </ul>
+              <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-1 mb-2">
+                GymNest</h3>
+              <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                A modern, multi-branch gym management system handling operations, memberships, diet structures, and HR.
+              </p>
+
+              <!-- Highlights Checklist -->
+              <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Multi-branch membership tracking</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Gym class, diet & attendance tools</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Business payroll & careers listings</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
+          <div class="px-6 pb-6">
             <!-- Tech Tags -->
             <div class="project-tech flex flex-wrap gap-1.5 mb-4">
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">React.js</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Inertia.js</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Tailwind
-                CSS</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">React.js</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Inertia.js</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Tailwind CSS</span>
             </div>
 
             <!-- Action Links -->
             <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
-              <a href="#"
-                class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition">
+              <a href="#" class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition">
                 <i class="fas fa-info-circle"></i> Details View
               </a>
             </div>
@@ -648,53 +720,49 @@
         </article>
 
         <!-- Project 3: MoneyNest (Web) -->
-        <article class="project-item bento-card bento-cyan p-6 flex flex-col justify-between" data-category="web">
+        <article class="project-item bento-card bento-cyan p-0 overflow-hidden flex flex-col justify-between" data-category="web">
           <div>
-            <!-- Card Top: Logo & Title Row -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex-shrink-0 flex items-center justify-center text-cyan-500 text-xl shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-                <i class="fas fa-wallet"></i>
-              </div>
-              <div class="text-left">
-                <span class="text-[10px] font-bold text-cyan-500 uppercase tracking-widest">Personal Finance</span>
-                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
-                  MoneyNest (Web)</h3>
-              </div>
+            <!-- Banner Image Header -->
+            <div class="relative w-full h-36 bg-slate-100 dark:bg-slate-900 overflow-hidden group/banner">
+              <img src="img/projects/moneynest_banner.png" alt="MoneyNest Web Banner" class="w-full h-full object-cover transition-transform duration-500 group-hover/banner:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
+              <span class="absolute top-3 right-3 text-[9px] font-bold text-white bg-slate-900/60 backdrop-blur-md px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/10">Personal Finance</span>
             </div>
 
-            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-              A modern personal finance and budget management system with sub-account ledgers.
-            </p>
+            <!-- Content Area -->
+            <div class="p-6 pt-8 relative">
+              <!-- Floating Logo -->
+              <div class="absolute -top-7 left-6 w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 flex items-center justify-center text-cyan-500 text-2xl shadow-lg transition-transform duration-300 hover:scale-110">
+                <i class="fas fa-wallet"></i>
+              </div>
 
-            <!-- Highlights Checklist -->
-            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Account ledger
-                & transfers</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Monthly budging
-                targets & alerts</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Personal loan
-                registers & metrics</li>
-            </ul>
+              <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-1 mb-2">
+                MoneyNest (Web)</h3>
+              <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                A modern personal finance and budget management system with sub-account ledgers.
+              </p>
+
+              <!-- Highlights Checklist -->
+              <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Account ledger & transfers</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Monthly budgeting targets & alerts</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Personal loan registers & metrics</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
+          <div class="px-6 pb-6">
             <!-- Tech Tags -->
             <div class="project-tech flex flex-wrap gap-1.5 mb-4">
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">React.js</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Inertia.js</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">TypeScript</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">React.js</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Inertia.js</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">TypeScript</span>
             </div>
 
             <!-- Action Links -->
             <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
-              <a href="#"
-                class="project-link text-xs font-semibold text-slate-400 hover:text-cyan-500 flex items-center gap-1.5 transition">
+              <a href="#" class="project-link text-xs font-semibold text-slate-400 hover:text-cyan-500 flex items-center gap-1.5 transition">
                 <i class="fas fa-info-circle"></i> Details View
               </a>
             </div>
@@ -702,52 +770,48 @@
         </article>
 
         <!-- Project 4: MoneyNest (Mobile) -->
-        <article class="project-item bento-card bento-emerald p-6 flex flex-col justify-between" data-category="mobile">
+        <article class="project-item bento-card bento-emerald p-0 overflow-hidden flex flex-col justify-between" data-category="mobile">
           <div>
-            <!-- Card Top: Logo & Title Row -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex-shrink-0 flex items-center justify-center text-emerald-500 text-xl shadow-[0_0_15px_rgba(16,185,129,0.15)]">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <div class="text-left">
-                <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">Mobile App</span>
-                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
-                  MoneyNest (Mobile)</h3>
-              </div>
+            <!-- Banner Image Header -->
+            <div class="relative w-full h-36 bg-slate-100 dark:bg-slate-900 overflow-hidden group/banner">
+              <img src="img/projects/moneynest_banner.png" alt="MoneyNest Mobile Banner" class="w-full h-full object-cover transition-transform duration-500 group-hover/banner:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
+              <span class="absolute top-3 right-3 text-[9px] font-bold text-white bg-slate-900/60 backdrop-blur-md px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/10">Mobile App</span>
             </div>
 
-            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-              Companion mobile application for the MoneyNest finance platform, supporting secure on-the-go syncing.
-            </p>
+            <!-- Content Area -->
+            <div class="p-6 pt-8 relative">
+              <!-- Floating Logo -->
+              <div class="absolute -top-7 left-6 w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 flex items-center justify-center text-emerald-500 text-2xl shadow-lg transition-transform duration-300 hover:scale-110">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
 
-            <!-- Highlights Checklist -->
-            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Secure REST
-                API synchronization</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Real-time
-                expense transaction logs</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Intuitive
-                budget chart visualizations</li>
-            </ul>
+              <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-1 mb-2">
+                MoneyNest (Mobile)</h3>
+              <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                Companion mobile application for the MoneyNest finance platform, supporting secure on-the-go syncing.
+              </p>
+
+              <!-- Highlights Checklist -->
+              <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Secure REST API synchronization</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Real-time expense transaction logs</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Intuitive budget chart visualizations</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
+          <div class="px-6 pb-6">
             <!-- Tech Tags -->
             <div class="project-tech flex flex-wrap gap-1.5 mb-4">
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Flutter</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Dart</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">REST
-                API</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Flutter</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Dart</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">REST API</span>
             </div>
 
             <!-- Action Links -->
             <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
-              <a href="#"
-                class="project-link text-xs font-semibold text-slate-400 hover:text-emerald-500 flex items-center gap-1.5 transition">
+              <a href="#" class="project-link text-xs font-semibold text-slate-400 hover:text-emerald-500 flex items-center gap-1.5 transition">
                 <i class="fas fa-info-circle"></i> Details View
               </a>
             </div>
@@ -755,57 +819,51 @@
         </article>
 
         <!-- Project 5: Montgomery Equipments -->
-        <article class="project-item bento-card bento-purple p-6 flex flex-col justify-between" data-category="web">
+        <article class="project-item bento-card bento-purple p-0 overflow-hidden flex flex-col justify-between" data-category="web">
           <div>
-            <!-- Card Top: Logo & Title Row -->
-            <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex-shrink-0 flex items-center justify-center text-purple-500 text-xl shadow-[0_0_15px_rgba(168,85,247,0.15)]">
-                <i class="fas fa-cogs"></i>
-              </div>
-              <div class="text-left">
-                <span class="text-[10px] font-bold text-purple-500 uppercase tracking-widest">E-Commerce</span>
-                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
-                  Montgomery Equipments</h3>
-              </div>
+            <!-- Banner Image Header -->
+            <div class="relative w-full h-36 bg-slate-100 dark:bg-slate-900 overflow-hidden group/banner">
+              <img src="img/projects/montgomery_banner.png" alt="Montgomery Equipments Banner" class="w-full h-full object-cover transition-transform duration-500 group-hover/banner:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
+              <span class="absolute top-3 right-3 text-[9px] font-bold text-white bg-slate-900/60 backdrop-blur-md px-2.5 py-1 rounded-full uppercase tracking-wider border border-white/10">E-Commerce</span>
             </div>
 
-            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-              Developed robust e-commerce shopping infrastructure and managed database systems for heavy equipment
-              sales.
-            </p>
+            <!-- Content Area -->
+            <div class="p-6 pt-8 relative">
+              <!-- Floating Logo -->
+              <div class="absolute -top-7 left-6 w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 flex items-center justify-center text-purple-500 text-2xl shadow-lg transition-transform duration-300 hover:scale-110">
+                <i class="fas fa-cogs"></i>
+              </div>
 
-            <!-- Highlights Checklist -->
-            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Interactive
-                product catalog system</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Robust MySQL
-                database design</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Seamless
-                checkout shopping flow</li>
-            </ul>
+              <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-1 mb-2">
+                Montgomery Equipments</h3>
+              <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                Developed robust e-commerce shopping infrastructure and managed database systems for heavy equipment sales.
+              </p>
+
+              <!-- Highlights Checklist -->
+              <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Interactive product catalog system</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Robust MySQL database design</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Seamless checkout shopping flow</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
+          <div class="px-6 pb-6">
             <!-- Tech Tags -->
             <div class="project-tech flex flex-wrap gap-1.5 mb-4">
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel
-                9</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">MySQL</span>
-              <span
-                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Bootstrap
-                4</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel 9</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">MySQL</span>
+              <span class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Bootstrap 4</span>
             </div>
 
             <!-- Action Links -->
             <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-between">
-              <a href="#"
-                class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition">
+              <a href="#" class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition">
                 <i class="fas fa-info-circle"></i> Details View
               </a>
-              <a href="https://montgomeryequipments.com" class="project-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://montgomeryequipments.com" class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
             </div>
@@ -988,6 +1046,38 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- Video Promo Modal -->
+  <div id="video-modal"
+    class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-300 pointer-events-none"
+    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div
+      class="relative w-full max-w-3xl mx-4 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-300"
+      id="modal-content">
+      <!-- Modal Header -->
+      <div class="flex justify-between items-center px-6 py-4 border-b border-slate-800/80">
+        <h3 id="modal-title" class="text-base font-bold text-white flex items-center gap-2">
+          <i class="fab fa-youtube text-red-500"></i> Mediusware Employee Diary Promo
+        </h3>
+        <button id="close-modal"
+          class="text-slate-400 hover:text-white transition-colors duration-200 p-1.5 rounded-lg hover:bg-slate-800 focus:outline-none"
+          aria-label="Close Modal">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <!-- Video Container -->
+      <div class="aspect-video w-full bg-black">
+        <iframe id="promo-iframe" class="w-full h-full" src="" title="Mediusware Employee Diary Promo" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- Link JavaScript Logic -->
   <script src="js/main.js"></script>

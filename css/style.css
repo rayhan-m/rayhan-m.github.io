@@ -1189,4 +1189,45 @@ textarea.form-input {
   --card-accent-glow: rgba(168, 85, 247, 0.1);
 }
 
+/* Expertise Pillars in About Me Card */
+.expertise-pillar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expertise-pillar:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--pillar-border) !important;
+  box-shadow: 0 8px 30px var(--pillar-glow);
+}
+
+/* Redesigned Project Cards styling */
+.project-item {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--card-accent) !important;
+}
+
+.project-item img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-item .absolute.-top-7 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover .absolute.-top-7 {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
 
