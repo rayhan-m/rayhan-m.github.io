@@ -4,11 +4,11 @@
    Design System & Theme Settings
    ========================================================================== */
 :root {
-  /* Light Theme */
-  --bg-canvas: #fafafa;
-  --bg-glass: rgba(255, 255, 255, 0.65);
-  --bg-glass-hover: rgba(255, 255, 255, 0.85);
-  --border-glass: rgba(226, 232, 240, 0.7);
+  /* Light Theme - Clean paper grid style */
+  --bg-canvas: #fcfcfd;
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  --bg-glass-hover: rgba(255, 255, 255, 0.9);
+  --border-glass: rgba(226, 232, 240, 0.8);
   --border-glass-hover: rgba(79, 70, 229, 0.3);
   
   --text-primary: #0f172a;
@@ -20,11 +20,19 @@
   --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
   --accent-glow: rgba(79, 70, 229, 0.08);
   
-  --aurora-1: rgba(244, 114, 182, 0.15); /* Soft pink */
-  --aurora-2: rgba(96, 165, 250, 0.15);  /* Soft blue */
+  --bg-dot: rgba(0, 0, 0, 0.03);
   
-  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
-  --shadow-hover: 0 12px 40px 0 rgba(79, 70, 229, 0.08);
+  --glow-color: rgba(79, 70, 229, 0.05);
+  --glow-indigo: rgba(79, 70, 229, 0.05);
+  --glow-cyan: rgba(6, 182, 212, 0.05);
+  --glow-emerald: rgba(16, 185, 129, 0.05);
+  --glow-purple: rgba(147, 51, 234, 0.05);
+  
+  --aurora-1: rgba(79, 70, 229, 0.05);
+  --aurora-2: rgba(6, 182, 212, 0.05);
+  
+  --shadow-glass: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 0 1px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 8px 30px -4px rgba(79, 70, 229, 0.12), 0 0 1px rgba(79, 70, 229, 0.2);
   
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -36,27 +44,35 @@
 }
 
 [data-theme="dark"] {
-  /* Dark Theme */
-  --bg-canvas: #09090b;
-  --bg-glass: rgba(20, 20, 23, 0.55);
-  --bg-glass-hover: rgba(28, 28, 33, 0.7);
-  --border-glass: rgba(63, 63, 70, 0.35);
-  --border-glass-hover: rgba(99, 102, 241, 0.4);
+  /* Dark Theme - Tech Obsidian */
+  --bg-canvas: #09090c;
+  --bg-glass: rgba(13, 13, 17, 0.6);
+  --bg-glass-hover: rgba(20, 20, 26, 0.75);
+  --border-glass: rgba(255, 255, 255, 0.06);
+  --border-glass-hover: rgba(168, 85, 247, 0.35);
   
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #64748b;
   
-  --accent-color: #6366f1;
-  --accent-hover: #818cf8;
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
-  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-color: #a855f7;
+  --accent-hover: #c084fc;
+  --accent-gradient: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%);
+  --accent-glow: rgba(168, 85, 247, 0.15);
   
-  --aurora-1: rgba(139, 92, 246, 0.12); /* Soft purple */
-  --aurora-2: rgba(6, 182, 212, 0.12);   /* Soft cyan */
+  --bg-dot: rgba(255, 255, 255, 0.035);
   
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
-  --shadow-hover: 0 16px 48px 0 rgba(99, 102, 241, 0.2);
+  --glow-color: rgba(168, 85, 247, 0.15);
+  --glow-indigo: rgba(99, 102, 241, 0.15);
+  --glow-cyan: rgba(6, 182, 212, 0.15);
+  --glow-emerald: rgba(16, 185, 129, 0.15);
+  --glow-purple: rgba(168, 85, 247, 0.15);
+  
+  --aurora-1: rgba(168, 85, 247, 0.08); 
+  --aurora-2: rgba(6, 182, 212, 0.08);   
+  
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --shadow-hover: 0 8px 40px rgba(168, 85, 247, 0.15), 0 0 0 1px rgba(168, 85, 247, 0.2);
 }
 
 /* ==========================================================================
@@ -74,6 +90,8 @@ html {
 
 body {
   background-color: var(--bg-canvas);
+  background-image: radial-gradient(var(--bg-dot) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-secondary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -457,9 +475,24 @@ a {
    Skills (Glowing Tags Grid)
    ========================================================================== */
 .skills-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills-column {
+  background-color: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skills-column:hover {
+  background-color: var(--bg-glass-hover);
+  border-color: var(--border-glass-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .skills-column h3 {
@@ -818,6 +851,182 @@ textarea.form-input {
 }
 
 /* ==========================================================================
+   About Section & Avatar Details
+   ========================================================================== */
+.about-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.about-avatar-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about-avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 4px solid var(--border-glass);
+  overflow: hidden;
+  box-shadow: var(--shadow-glass);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-avatar:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-color);
+}
+
+.about-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-details {
+  flex: 1;
+}
+
+.about-name {
+  font-size: 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.about-subtitle {
+  font-size: 1.15rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-grid-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.contact-grid-item:hover {
+  color: var(--accent-color);
+}
+
+.contact-grid-item i {
+  color: var(--text-muted);
+  width: 1rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Credentials & Info Grid
+   ========================================================================== */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.credential-card {
+  background-color: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-glass);
+  transition: all 0.3s ease;
+}
+
+.credential-card:hover {
+  border-color: var(--border-glass-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.credential-card h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.credential-card h2 svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--accent-color);
+}
+
+.credential-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.credential-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.credential-item p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.credential-item span {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.info-list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.5rem;
+  align-items: center;
+}
+
+.info-list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-list-item .label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.info-list-item .val {
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .footer {
@@ -864,4 +1073,161 @@ textarea.form-input {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  
+  .about-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid-item {
+    width: 100%;
+    justify-content: center;
+  }
 }
+
+/* ==========================================================================
+   Project Highlighted Buttons
+   ========================================================================== */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+.project-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--card-accent);
+  background-color: var(--card-accent-glow);
+  border: 1px solid var(--card-border-hover);
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  width: auto;
+}
+
+.project-link:hover {
+  color: #ffffff !important;
+  background-color: var(--card-accent) !important;
+  border-color: var(--card-accent) !important;
+  box-shadow: 0 4px 15px var(--card-glow);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Bento Grid Dashboard Widgets
+   ========================================================================== */
+.bento-card {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-glass);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  --card-glow: var(--glow-color);
+  --card-border-hover: var(--border-glass-hover);
+  --card-accent: var(--accent-color);
+  --card-accent-hover: var(--accent-hover);
+  --card-accent-glow: var(--accent-glow);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-border-hover);
+  box-shadow: 0 10px 45px -5px var(--card-glow), var(--shadow-hover);
+}
+
+.bento-card.bento-indigo {
+  --card-glow: var(--glow-indigo);
+  --card-border-hover: rgba(99, 102, 241, 0.45);
+  --card-accent: #6366f1;
+  --card-accent-hover: #4f46e5;
+  --card-accent-glow: rgba(99, 102, 241, 0.1);
+}
+
+.bento-card.bento-cyan {
+  --card-glow: var(--glow-cyan);
+  --card-border-hover: rgba(6, 182, 212, 0.45);
+  --card-accent: #06b6d4;
+  --card-accent-hover: #0891b2;
+  --card-accent-glow: rgba(6, 182, 212, 0.1);
+}
+
+.bento-card.bento-emerald {
+  --card-glow: var(--glow-emerald);
+  --card-border-hover: rgba(16, 185, 129, 0.45);
+  --card-accent: #10b981;
+  --card-accent-hover: #059669;
+  --card-accent-glow: rgba(16, 185, 129, 0.1);
+}
+
+.bento-card.bento-purple {
+  --card-glow: var(--glow-purple);
+  --card-border-hover: rgba(168, 85, 247, 0.45);
+  --card-accent: #a855f7;
+  --card-accent-hover: #9333ea;
+  --card-accent-glow: rgba(168, 85, 247, 0.1);
+}
+
+/* Expertise Pillars in About Me Card */
+.expertise-pillar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expertise-pillar:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--pillar-border) !important;
+  box-shadow: 0 8px 30px var(--pillar-glow);
+}
+
+/* Redesigned Project Cards styling */
+.project-item {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--card-accent) !important;
+}
+
+.project-item img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-item .absolute.-top-7 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover .absolute.-top-7 {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+

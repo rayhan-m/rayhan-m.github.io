@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initActiveNavOnScroll();
   initContactForm();
+  initVideoModal();
 });
 
 /* ==========================================================================
@@ -66,8 +67,9 @@ function initMobileMenu() {
 function initTypingEffect() {
   const target = document.getElementById('type-text');
   if (!target) return;
+  // "PHP Laravel", "Node.js", "Express.js", "MySQL", "AWS", "Docker", "Web Development", "TypeScript", "React.js", "Flutter"
   
-  const roles = ["Software Engineer", "Laravel Developer", "Problem Solver"];
+  const roles = ["Software Engineering", "Laravel & React.js", "DevOps Systems", "Docker Containers", "Flutter Apps"];
   let roleIdx = 0;
   let charIdx = 0;
   let deleting = false;
@@ -213,4 +215,85 @@ function initContactForm() {
       }, 5000);
     }
   }
+}
+
+/* ==========================================================================
+   Video Promo Modal Logic
+   ========================================================================== */
+function initVideoModal() {
+  const openBtn = document.getElementById('open-promo-btn');
+  const modal = document.getElementById('video-modal');
+  const modalContent = document.getElementById('modal-content');
+  const closeBtn = document.getElementById('close-modal');
+  const iframe = document.getElementById('promo-iframe');
+  
+  if (!openBtn || !modal || !closeBtn || !iframe) return;
+  
+  const videoUrl = 'https://youtu.be/D_UBOHiMKNc?si=szu3yIX6SX6zrhOd'; // Default placeholder, user can replace this
+  
+  function getYouTubeEmbedUrl(url) {
+    let videoId = '';
+    try {
+      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      const match = url.match(regExp);
+      if (match && match[2].length === 11) {
+        videoId = match[2];
+      }
+    } catch (e) {
+      console.error('Error parsing YouTube URL:', e);
+    }
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
+  }
+
+  function openModal() {
+    const embedUrl = getYouTubeEmbedUrl(videoUrl);
+    // Set video src with autoplay
+    iframe.src = `${embedUrl}?autoplay=1`;
+    
+    // Show modal container
+    modal.classList.remove('hidden');
+    
+    // Trigger transition
+    setTimeout(() => {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      if (modalContent) {
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+      }
+    }, 10);
+  }
+  
+  function closeModal() {
+    // Trigger transition out
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    if (modalContent) {
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+    }
+    
+    // Wait for transition to complete, then clear src and hide
+    setTimeout(() => {
+      iframe.src = '';
+      modal.classList.add('hidden');
+    }, 300);
+  }
+  
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  
+  // Close modal when clicking outside of modal content (on the backdrop)
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Close modal when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
 }
