@@ -66,8 +66,9 @@ function initMobileMenu() {
 function initTypingEffect() {
   const target = document.getElementById('type-text');
   if (!target) return;
+  // "PHP Laravel", "Node.js", "Express.js", "MySQL", "AWS", "Docker", "Web Development", "TypeScript", "React.js", "Flutter"
   
-  const roles = ["Software Engineer Level 3", "Laravel & Node.js Developer", "DevOps & Cloud Engineer"];
+  const roles = ["Software Engineer Level 3", "Laravel & React.js", "DevOps", "Docker", "Flutter" ];
   let roleIdx = 0;
   let charIdx = 0;
   let deleting = false;

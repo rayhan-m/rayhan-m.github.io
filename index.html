@@ -1,473 +1,987 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="dark" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Optimization Meta Tags -->
   <title>Md. Rayhan Mahmud | Software Engineer</title>
+  <meta name="title" content="Md. Rayhan Mahmud | Software Engineer Portfolio">
+  <meta name="description"
+    content="Portfolio of Md. Rayhan Mahmud, Software Engineer Level 3 specializing in Laravel, Node.js, React, Flutter, and DevOps. DIU CIS graduate.">
+  <meta name="keywords"
+    content="Md. Rayhan Mahmud, Software Engineer, Web Developer, PHP, Laravel, Node.js, MySQL, AWS, Docker, DIU CIS, Portfolio">
+  <meta name="author" content="Md. Rayhan Mahmud">
 
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rayhan-m.github.io/">
+  <meta property="og:title" content="Md. Rayhan Mahmud | Software Engineer Portfolio">
+  <meta property="og:description"
+    content="Sleek bento-grid developer portfolio. Discover my B2B/B2C SaaS platforms, DevOps pipelines, and tech stack.">
+  <meta property="og:image" content="https://rayhan-m.github.io/images/og-image.png">
 
   <!-- FontAwesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Custom Tailwind Configuration -->
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
           colors: {
-            primary: '#2563eb', // Blue-600
-            secondary: '#1e293b', // Slate-800
-            accent: '#eff6ff', // Blue-50
+            primary: {
+              DEFAULT: '#4f46e5', // Indigo-600
+              dark: '#a855f7' // Purple-500
+            },
+            accent: {
+              DEFAULT: '#06b6d4', // Cyan-500
+              dark: '#22d3ee' // Cyan-400
+            }
           }
         }
       }
     }
   </script>
-  <style>
-    /* Custom scrollbar for a polished look */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
 
-    ::-webkit-scrollbar-track {
-      background: #f1f5f9;
-    }
+  <!-- Link Custom CSS Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
 
-    ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
-    }
-  </style>
+  <!-- Schema.org JSON-LD Metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Md. Rayhan Mahmud",
+    "jobTitle": "Software Engineer Level 3",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Daffodil International University"
+    },
+    "knowsAbout": ["PHP Laravel", "Node.js", "Express.js", "MySQL", "AWS", "Docker", "Web Development", "TypeScript", "React.js", "Flutter"],
+    "url": "https://rayhanmahmud.me"
+  }
+  </script>
 </head>
 
-<body class="bg-gray-50 text-slate-800 font-sans antialiased selection:bg-primary selection:text-white">
+<body
+  class="bg-[var(--bg-canvas)] text-[var(--text-secondary)] transition-colors duration-300 font-sans antialiased selection:bg-purple-500 selection:text-white">
 
-  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex-shrink-0 flex items-center">
-          <span class="font-bold text-xl tracking-tight text-primary">RM.</span>
-        </div>
-        <div class="hidden md:flex space-x-8">
-          <a href="#about" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">About</a>
-          <a href="#skills" class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Skills</a>
-          <a href="#experience"
-            class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Experience</a>
-          <a href="#projects"
-            class="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Projects</a>
-        </div>
-        <div class="md:hidden flex items-center">
-          <!-- Mobile menu button (Simplified for static template) -->
-          <button class="text-slate-600 hover:text-primary focus:outline-none">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
+  <!-- Aurora background glow blooms -->
+  <div class="aurora-container">
+    <div class="aurora-bloom ab-1"></div>
+    <div class="aurora-bloom ab-2"></div>
+  </div>
+
+  <!-- ==========================================================================
+     Header & Navigation Bar
+     ========================================================================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">RAYHAN<span>.</span></a>
+
+      <div class="nav-actions">
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Theme Toggle Trigger -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+          <!-- Sun Icon (shown in dark) -->
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light) -->
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile hamburger Menu Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-12 flex flex-col">
+  <!-- ==========================================================================
+     Main Bento Grid Container
+     ========================================================================== -->
+  <main class="main-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    style="display: grid; max-width: 1100px;">
 
-    <section id="about"
-      class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12 flex flex-col md:flex-row gap-10 items-center md:items-start">
-      <div class="flex-shrink-0">
-        <!-- Using a professional placeholder image matching the name initials -->
-        <div class="w-40 h-40 rounded-full border-4 border-accent overflow-hidden shadow-md">
-          <img src="https://placehold.co/400x400/2563eb/ffffff?text=RM" alt="Md. Rayhan Mahmud"
-            class="w-full h-full object-cover">
+    <!-- Bento 1: Hero Identity (Spans 2 columns on desktop) -->
+    <section id="home" class="bento-card bento-purple md:col-span-2 flex flex-col justify-between">
+      <div>
+        <span class="hero-tagline text-xs font-semibold tracking-wider text-purple-500 dark:text-purple-400">WELCOME TO
+          MY PORTFOLIO</span>
+        <h1 class="hero-title text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mt-2">Hi, I'm <span
+            class="gradient-text">Md. Rayhan Mahmud</span></h1>
+        <div class="hero-type-row text-lg sm:text-xl font-medium mt-3">
+          <span>A dedicated </span><span id="type-text">Software Engineer Level 3</span><span
+            class="type-cursor">|</span>
         </div>
+        <p class="hero-intro text-slate-600 dark:text-slate-300 mt-4 max-w-xl leading-relaxed">
+          I architect multi-vendor B2B/B2C e-commerce platforms, build robust and secure payment integrations, and
+          design seamless automated DevOps pipelines in the cloud.
+        </p>
       </div>
 
-      <div class="flex-1 text-center md:text-left">
-        <h1 class="text-3xl sm:text-4xl font-bold text-secondary tracking-tight">Md. Rayhan Mahmud</h1>
-        <p class="text-lg sm:text-xl text-primary font-medium mt-2">Software Engineer Level 3</p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#" class="btn btn-secondary" download="Md_Rayhan_Mahmud_Resume.pdf"><i class="fas fa-download"></i>
+          Download Resume</a>
+      </div>
+    </section>
 
-        <p class="mt-4 text-slate-600 leading-relaxed max-w-2xl">
-          Proactive software engineer with a strong foundation in architecting multi-vendor platforms and driving DevOps
-          initiatives. Passionate about writing clean code, integrating AI technologies, and contributing to the
-          technical vision of a growth-oriented organization.
-        </p>
-
-        <!-- Contact Grid -->
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-slate-600">
-          <div class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-envelope text-gray-400 w-4"></i>
-            <a href="mailto:rayhan.mahmud.me@gmail.com"
-              class="hover:text-primary transition">rayhan.mahmud.me@gmail.com</a>
-          </div>
-          <div class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-phone text-gray-400 w-4"></i>
-            <a href="tel:+8801521254564" class="hover:text-primary transition">+88 01521 254564</a>
-          </div>
-          <div class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-globe text-gray-400 w-4"></i>
-            <a href="https://rayhanmahmud.me" target="_blank" class="hover:text-primary transition">rayhanmahmud.me</a>
-          </div>
-          <div class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fab fa-github text-gray-400 w-4"></i>
-            <a href="https://github.com/rayhan-m" target="_blank"
-              class="hover:text-primary transition">github.com/rayhan-m</a>
-          </div>
-          <div class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fab fa-linkedin text-gray-400 w-4"></i>
-            <a href="#" class="hover:text-primary transition">LinkedIn Profile</a>
-          </div>
-          <div class="flex items-center justify-center md:justify-start gap-2">
-            <i class="fas fa-map-marker-alt text-gray-400 w-4"></i>
+    <!-- Bento 2: Quick Connect (Spans 1 column) -->
+    <section class="bento-card bento-cyan flex flex-col justify-between">
+      <div>
+        <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-4">Quick Connect</h3>
+        <div class="space-y-4">
+          <a href="mailto:rayhan.mahmud.me@gmail.com"
+            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-cyan-500 transition text-sm">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <span class="truncate">rayhan.mahmud.me@gmail.com</span>
+          </a>
+          <a href="tel:+8801521254564"
+            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-cyan-500 transition text-sm">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">
+              <i class="fas fa-phone"></i>
+            </div>
+            <span>+88 01521 254564</span>
+          </a>
+          <div class="flex items-center gap-3 text-slate-600 dark:text-slate-300 text-sm">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
             <span>Mohammadpur, Dhaka</span>
           </div>
         </div>
       </div>
+
+      <div class="mt-6 flex gap-3">
+        <a href="https://github.com/rayhan-m" target="_blank" rel="noopener noreferrer"
+          class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-500 transition">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/md-rayhan-mahmud-499557170" target="_blank" rel="noopener noreferrer"
+          class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-500 transition">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://codenestit.com" target="_blank" rel="noopener noreferrer"
+          class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-500 transition">
+          <i class="fas fa-globe fa-lg"></i>
+        </a>
+      </div>
     </section>
 
-    <section id="skills" class="space-y-6">
-      <h2 class="text-2xl font-bold text-secondary flex items-center gap-2 border-b pb-2">
-        <i class="fas fa-code text-primary"></i> Core Skills
-      </h2>
+    <!-- Bento 3: About Me Details (Spans 2 columns on desktop) -->
+    <section id="about" class="bento-card bento-indigo md:col-span-2">
+      <div class="section-header">
+        <h2 class="section-title text-slate-900 dark:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          About Me
+        </h2>
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Skill Category 1 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 class="font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <i class="fas fa-server text-gray-400"></i> Backend & API
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">PHP (OOP)</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Laravel</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Node.js</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Express.js</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">RESTful Arch</span>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-4">
+        <!-- Left: Profile Widget & Quick Stats (4 cols on desktop) -->
+        <div
+          class="md:col-span-4 flex flex-col items-center text-center border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 pb-6 md:pb-0 md:pr-6">
+          <div class="relative w-32 h-32 group">
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-purple-500 to-cyan-500 rounded-2xl rotate-6 group-hover:rotate-12 transition duration-300 opacity-70 blur">
+            </div>
+            <div
+              class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-indigo-500 bg-slate-900 flex items-center justify-center">
+              <img src="img/rayhan.jpg" alt="Md. Rayhan Mahmud" class="w-full h-full object-fill">
+            </div>
+            <span
+              class="absolute -bottom-2 -right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow border border-indigo-400">
+              Lvl 3 Eng
+            </span>
+          </div>
+
+          <h3 class="about-name text-slate-900 dark:text-white text-xl font-bold mt-4">Rayhan Mahmud</h3>
+          <p class="text-xs text-indigo-500 dark:text-indigo-400 font-semibold uppercase tracking-wider mt-1">Software
+            Engineer</p>
+
+          <!-- Quick Stats Grid -->
+          <div class="grid grid-cols-2 gap-2 mt-4 w-full">
+            <div
+              class="p-2.5 bg-slate-100/50 dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30 rounded-xl">
+              <span class="block text-lg font-bold text-slate-800 dark:text-white">5+ Yrs</span>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium uppercase">Experience</span>
+            </div>
+            <div
+              class="p-2.5 bg-slate-100/50 dark:bg-slate-800/30 border border-slate-200/50 dark:border-slate-700/30 rounded-xl">
+              <span class="block text-lg font-bold text-slate-800 dark:text-white">15+</span>
+              <span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium uppercase">Projects</span>
+            </div>
           </div>
         </div>
 
-        <!-- Skill Category 2 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 class="font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <i class="fas fa-laptop-code text-gray-400"></i> Frontend & Mobile
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">JS (ES6+)</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">TypeScript</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">React.js</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Inertia.js</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Tailwind CSS</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Flutter</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Dart</span>
+        <!-- Right: Bio & Pillars (8 cols on desktop) -->
+        <div class="md:col-span-8 flex flex-col justify-between">
+          <div>
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              I am a proactive and results-driven Software Engineer with a B.Sc. in Computing & Information Systems
+              (CGPA: 3.77) from DIU. Over the past 6+ years, I have focused on building scalable web infrastructures,
+              automating deployments, and developing clean API systems that deliver tangible business value.
+            </p>
           </div>
-        </div>
 
-        <!-- Skill Category 3 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 class="font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <i class="fas fa-database text-gray-400"></i> Devops & DB
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">AWS (EC2, S3)</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">MySQL</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Docker</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">CI/CD</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Git/GitHub</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Linux/Ubuntu</span>
-          </div>
-        </div>
+          <!-- Expertise Pillars Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <div class="flex gap-3 items-start">
+              <div
+                class="w-8 h-8 rounded-lg bg-indigo-500/10 flex-shrink-0 flex items-center justify-center text-indigo-500">
+                <i class="fas fa-layer-group text-sm"></i>
+              </div>
+              <div class="text-left">
+                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">SaaS & Architecture</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Multi-tenant e-commerce
+                  marketplace and B2B platforms.</p>
+              </div>
+            </div>
 
-        <!-- Skill Category 4 -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h3 class="font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <i class="fas fa-users text-gray-400"></i> Leadership
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Team Lead</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Client Comm.</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Agile/Scrum</span>
-            <span class="px-3 py-1 bg-gray-100 text-slate-700 text-sm rounded-lg font-medium">Code Reviews</span>
+            <div class="flex gap-3 items-start">
+              <div
+                class="w-8 h-8 rounded-lg bg-purple-500/10 flex-shrink-0 flex items-center justify-center text-purple-500">
+                <i class="fas fa-cloud text-sm"></i>
+              </div>
+              <div class="text-left">
+                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">DevOps & AWS</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">CI/CD automation, server
+                  maintenance, and Docker deployments.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div
+                class="w-8 h-8 rounded-lg bg-cyan-500/10 flex-shrink-0 flex items-center justify-center text-cyan-500">
+                <i class="fas fa-robot text-sm"></i>
+              </div>
+              <div class="text-left">
+                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Real-Time & AI</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">WebSockets chat and Google
+                  Gemini/ChatGPT integrations.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div
+                class="w-8 h-8 rounded-lg bg-emerald-500/10 flex-shrink-0 flex items-center justify-center text-emerald-500">
+                <i class="fas fa-wallet text-sm"></i>
+              </div>
+              <div class="text-left">
+                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">Financial Gateways</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Secure integration of
+                  Stripe and bKash payments.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="space-y-6">
-      <h2 class="text-2xl font-bold text-secondary flex items-center gap-2 border-b pb-2">
-        <i class="fas fa-briefcase text-primary"></i> Professional Experience
-      </h2>
+    <!-- Bento 4: Core Skills Cloud (Spans 1 column) -->
+    <section id="skills" class="bento-card bento-emerald">
+      <div class="section-header">
+        <h2 class="section-title text-slate-900 dark:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
+            <path d="M9 22V12h6v10"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          Core Skills
+        </h2>
+      </div>
 
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
-        <div class="relative border-l-2 border-accent ml-3 md:ml-4 space-y-10">
+      <div class="flex flex-col gap-6 mt-2">
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Backend & API</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">PHP
+              (OOP)</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Laravel</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Node.js</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Express.js</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">RESTful
+              Arch</span>
+          </div>
+        </div>
 
-          <!-- Experience 1 -->
-          <div class="relative pl-8 md:pl-10">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-white"></div>
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-              <h3 class="text-xl font-bold text-slate-800">Software Engineer Level 3</h3>
-              <span class="text-sm font-semibold text-primary bg-accent px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">May
-                2023 - Present</span>
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Frontend & Mobile</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">JS
+              (ES6+)</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">TypeScript</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">React.js</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Inertia.js</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Tailwind
+              CSS</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Flutter</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Dart</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">DevOps & Database</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">AWS
+              (EC2, S3)</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">MySQL</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Docker</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">CI/CD</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Git/GitHub</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Linux/Ubuntu</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Leadership</h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Team
+              Lead</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Client
+              Comm.</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Agile/Scrum</span>
+            <span
+              class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded-full font-medium">Code
+              Reviews</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento 5: Experience Timeline (Spans 3 columns/full width) -->
+    <section id="experience" class="bento-card bento-purple md:col-span-3">
+      <div class="section-header">
+        <h2 class="section-title text-slate-900 dark:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          Professional Experience
+        </h2>
+      </div>
+
+      <div class="timeline mt-6">
+        <!-- Experience 1 -->
+        <div class="timeline-item">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 flex-shrink-0 flex items-center justify-center bg-white shadow-[0_0_15px_rgba(168,85,247,0.1)]">
+                <img src="img/logo/mediusware_logo.jpg" alt="Mediusware Ltd" class="w-full h-full object-cover">
+              </div>
+              <div class="text-left">
+                <span class="timeline-inst text-slate-800 dark:text-slate-200 font-bold block leading-tight">Mediusware
+                  Ltd <span class="text-xs text-slate-400 dark:text-slate-500 font-normal ml-1">(Employee
+                    Diary)</span></span>
+                <span class="text-xs text-slate-400 dark:text-slate-500 block mt-1"><i
+                    class="fas fa-map-marker-alt text-[10px] mr-1 text-purple-500"></i> 7th & 8th, 24/1, Taj Mahal Road,
+                  Ring Road, Shiya Masjid mor, Dhaka-1207</span>
+              </div>
             </div>
-            <h4 class="text-md font-medium text-slate-600 mb-4">Mediusware Ltd (Employee Diary)</h4>
-            <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
-              <li>Architected and managed complex B2B and B2C multivendor e-commerce platforms with product white label
-                option.</li>
-              <li>Developed and implemented real-time Live Chat functionalities using WebSockets.</li>
-              <li>Spearheaded DevOps tasks, including AWS server deployment, maintenance, and S3 bucket implementation.
-              </li>
-              <li>Integrated third-party AI models (Google Gemini, ChatGPT) for automated Room Decoration suggestions.
-              </li>
-              <li>Engineered secure financial systems, incorporating Stripe for subscriptions/single payments, and bKash
-                payment gateway.</li>
+            <span
+              class="timeline-date font-semibold text-purple-500 dark:text-purple-400 text-xs sm:text-right bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20 w-fit">May
+              2023 - Present</span>
+          </div>
+          <h3 class="timeline-title text-slate-800 dark:text-slate-100 text-lg font-bold pl-0 sm:pl-13">Software
+            Engineer Level 3</h3>
+          <ul
+            class="timeline-details list-disc pl-5 mt-2 flex flex-col gap-1.5 text-slate-600 dark:text-slate-300 text-sm pl-0 sm:pl-13">
+            <li>Architected and managed complex B2B and B2C multivendor e-commerce platforms with product white label
+              option.</li>
+            <li>Developed and implemented real-time Live Chat functionalities using WebSockets.</li>
+            <li>Spearheaded DevOps tasks, including AWS server deployment, maintenance, and S3 bucket implementation.
+            </li>
+            <li>Integrated third-party AI models (Google Gemini, ChatGPT) for automated Room Decoration suggestions.
+            </li>
+            <li>Engineered secure financial systems, incorporating Stripe for subscriptions/single payments, and bKash
+              payment gateway.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item mt-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 flex-shrink-0 flex items-center justify-center bg-white shadow-[0_0_15px_rgba(99,102,241,0.1)]">
+                <img src="img/logo/onesttech_logo.webp" alt="Onest Tech" class="w-full h-full object-cover">
+              </div>
+              <div class="text-left">
+                <span class="timeline-inst text-slate-800 dark:text-slate-200 font-bold block leading-tight">Onest
+                  Tech</span>
+                <span class="text-xs text-slate-400 dark:text-slate-500 block mt-1"><i
+                    class="fas fa-map-marker-alt text-[10px] mr-1 text-indigo-500"></i> House #148, Block-E, Rd No 13B,
+                  Dhaka 1213</span>
+              </div>
+            </div>
+            <span
+              class="timeline-date font-semibold text-indigo-500 dark:text-indigo-400 text-xs sm:text-right bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20 w-fit">Feb
+              2021 - May 2023</span>
+          </div>
+          <h3 class="timeline-title text-slate-800 dark:text-slate-100 text-lg font-bold pl-0 sm:pl-13">Software
+            Developer</h3>
+          <ul
+            class="timeline-details list-disc pl-5 mt-2 flex flex-col gap-1.5 text-slate-600 dark:text-slate-300 text-sm pl-0 sm:pl-13">
+            <li>Developed comprehensive APIs facilitating robust Multivendor E-commerce environments.</li>
+            <li>Executed seamless integrations with multiple Delivery Companies and Payment Gateways.</li>
+            <li>Implemented extensive Laravel Localization for multi-language application support.</li>
+            <li>Developed internal tools including an Affiliate System and HRM Attendance tracking.</li>
+          </ul>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item mt-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 flex-shrink-0 flex items-center justify-center bg-white shadow-[0_0_15px_rgba(6,182,212,0.1)]">
+                <img src="img/logo/spondonit_logo.jpeg" alt="SPONDON IT" class="w-full h-full object-cover">
+              </div>
+              <div class="text-left">
+                <span class="timeline-inst text-slate-800 dark:text-slate-200 font-bold block leading-tight">SPONDON
+                  IT</span>
+                <span class="text-xs text-slate-400 dark:text-slate-500 block mt-1"><i
+                    class="fas fa-map-marker-alt text-[10px] mr-1 text-cyan-500"></i> 89/2 Panthapath, Dhaka 1215</span>
+              </div>
+            </div>
+            <span
+              class="timeline-date font-semibold text-cyan-500 dark:text-cyan-400 text-xs sm:text-right bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20 w-fit">Jan
+              2020 - Jan 2021</span>
+          </div>
+          <h3 class="timeline-title text-slate-800 dark:text-slate-100 text-lg font-bold pl-0 sm:pl-13">Junior Laravel
+            Developer</h3>
+          <ul
+            class="timeline-details list-disc pl-5 mt-2 flex flex-col gap-1.5 text-slate-600 dark:text-slate-300 text-sm pl-0 sm:pl-13">
+            <li>Created robust backend APIs to support mobile application data consumption.</li>
+            <li>Assisted in the development of a large-scale School Management System.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento 6: Selected Projects Section (Spans 3 columns/full width) -->
+    <section id="projects" class="bento-card bento-cyan md:col-span-3">
+      <div class="projects-header-row">
+        <h2 class="section-title text-slate-900 dark:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          Selected Technical Projects
+        </h2>
+        <div class="filter-menu">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+        </div>
+      </div>
+
+      <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <!-- Project 1: Housebrands -->
+        <article class="project-item bento-card bento-indigo p-6 flex flex-col justify-between" data-category="web">
+          <div>
+            <!-- Card Top: Logo & Title Row -->
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex-shrink-0 flex items-center justify-center text-indigo-500 text-xl shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest">SaaS / Web App</span>
+                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
+                  Housebrands</h3>
+              </div>
+            </div>
+
+            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              A multi-tenant SaaS marketplace and project management platform designed for interior designers, home
+              brands, and clients.
+            </p>
+
+            <!-- Highlights Checklist -->
+            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> AI room
+                decoration generator</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> Kanban boards
+                & billable hour logs</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-indigo-500"></i> Multi-tenant
+                Stripe billing</li>
             </ul>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="relative pl-8 md:pl-10">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-300 ring-4 ring-white"></div>
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-              <h3 class="text-xl font-bold text-slate-800">Software Developer</h3>
-              <span class="text-sm font-medium text-slate-500 bg-gray-100 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">Feb
-                2021 - May 2023</span>
+          <div>
+            <!-- Tech Tags -->
+            <div class="project-tech flex flex-wrap gap-1.5 mb-4">
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel
+                11</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Next.js</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">TypeScript</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">AWS
+                S3</span>
             </div>
-            <h4 class="text-md font-medium text-slate-600 mb-4">Onest Tech</h4>
-            <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
-              <li>Developed comprehensive APIs facilitating robust Multivendor E-commerce environments.</li>
-              <li>Executed seamless integrations with multiple Delivery Companies and Payment Gateways.</li>
-              <li>Implemented extensive Laravel Localization for multi-language application support.</li>
-              <li>Developed internal tools including an Affiliate System and HRM Attendance tracking.</li>
+
+            <!-- Action Links -->
+            <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
+              <a href="#"
+                class="project-link text-xs font-semibold text-slate-400 hover:text-indigo-500 flex items-center gap-1.5 transition">
+                <i class="fas fa-info-circle"></i> Details View
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: GymNest -->
+        <article class="project-item bento-card bento-purple p-6 flex flex-col justify-between" data-category="web">
+          <div>
+            <!-- Card Top: Logo & Title Row -->
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex-shrink-0 flex items-center justify-center text-purple-500 text-xl shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-[10px] font-bold text-purple-500 uppercase tracking-widest">Web Application</span>
+                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
+                  GymNest</h3>
+              </div>
+            </div>
+
+            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              A modern, multi-branch gym management system handling operations, memberships, diet structures, and HR.
+            </p>
+
+            <!-- Highlights Checklist -->
+            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Multi-branch
+                membership tracking</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Gym class,
+                diet & attendance tools</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Business
+                payroll & careers listings</li>
             </ul>
           </div>
 
-          <!-- Experience 3 -->
-          <div class="relative pl-8 md:pl-10">
-            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-300 ring-4 ring-white"></div>
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-              <h3 class="text-xl font-bold text-slate-800">Junior Laravel Developer</h3>
-              <span class="text-sm font-medium text-slate-500 bg-gray-100 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">Jan
-                2020 - Jan 2021</span>
+          <div>
+            <!-- Tech Tags -->
+            <div class="project-tech flex flex-wrap gap-1.5 mb-4">
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">React.js</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Inertia.js</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Tailwind
+                CSS</span>
             </div>
-            <h4 class="text-md font-medium text-slate-600 mb-4">SPONDON IT</h4>
-            <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm md:text-base">
-              <li>Created robust backend APIs to support mobile application data consumption.</li>
-              <li>Assisted in the development of a large-scale School Management System.</li>
+
+            <!-- Action Links -->
+            <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
+              <a href="#"
+                class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition">
+                <i class="fas fa-info-circle"></i> Details View
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: MoneyNest (Web) -->
+        <article class="project-item bento-card bento-cyan p-6 flex flex-col justify-between" data-category="web">
+          <div>
+            <!-- Card Top: Logo & Title Row -->
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex-shrink-0 flex items-center justify-center text-cyan-500 text-xl shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-[10px] font-bold text-cyan-500 uppercase tracking-widest">Personal Finance</span>
+                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
+                  MoneyNest (Web)</h3>
+              </div>
+            </div>
+
+            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              A modern personal finance and budget management system with sub-account ledgers.
+            </p>
+
+            <!-- Highlights Checklist -->
+            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Account ledger
+                & transfers</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Monthly budging
+                targets & alerts</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-cyan-500"></i> Personal loan
+                registers & metrics</li>
             </ul>
           </div>
 
-        </div>
+          <div>
+            <!-- Tech Tags -->
+            <div class="project-tech flex flex-wrap gap-1.5 mb-4">
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">React.js</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Inertia.js</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">TypeScript</span>
+            </div>
+
+            <!-- Action Links -->
+            <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
+              <a href="#"
+                class="project-link text-xs font-semibold text-slate-400 hover:text-cyan-500 flex items-center gap-1.5 transition">
+                <i class="fas fa-info-circle"></i> Details View
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: MoneyNest (Mobile) -->
+        <article class="project-item bento-card bento-emerald p-6 flex flex-col justify-between" data-category="mobile">
+          <div>
+            <!-- Card Top: Logo & Title Row -->
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex-shrink-0 flex items-center justify-center text-emerald-500 text-xl shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">Mobile App</span>
+                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
+                  MoneyNest (Mobile)</h3>
+              </div>
+            </div>
+
+            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              Companion mobile application for the MoneyNest finance platform, supporting secure on-the-go syncing.
+            </p>
+
+            <!-- Highlights Checklist -->
+            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Secure REST
+                API synchronization</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Real-time
+                expense transaction logs</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-emerald-500"></i> Intuitive
+                budget chart visualizations</li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- Tech Tags -->
+            <div class="project-tech flex flex-wrap gap-1.5 mb-4">
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Flutter</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Dart</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">REST
+                API</span>
+            </div>
+
+            <!-- Action Links -->
+            <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-center">
+              <a href="#"
+                class="project-link text-xs font-semibold text-slate-400 hover:text-emerald-500 flex items-center gap-1.5 transition">
+                <i class="fas fa-info-circle"></i> Details View
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Montgomery Equipments -->
+        <article class="project-item bento-card bento-purple p-6 flex flex-col justify-between" data-category="web">
+          <div>
+            <!-- Card Top: Logo & Title Row -->
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex-shrink-0 flex items-center justify-center text-purple-500 text-xl shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-[10px] font-bold text-purple-500 uppercase tracking-widest">E-Commerce</span>
+                <h3 class="project-title text-slate-800 dark:text-slate-100 text-lg font-bold leading-tight mt-0.5">
+                  Montgomery Equipments</h3>
+              </div>
+            </div>
+
+            <p class="project-desc text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              Developed robust e-commerce shopping infrastructure and managed database systems for heavy equipment
+              sales.
+            </p>
+
+            <!-- Highlights Checklist -->
+            <ul class="space-y-1.5 text-xs text-slate-500 dark:text-slate-400 mb-5 pl-1 text-left">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Interactive
+                product catalog system</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Robust MySQL
+                database design</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-[10px] text-purple-500"></i> Seamless
+                checkout shopping flow</li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- Tech Tags -->
+            <div class="project-tech flex flex-wrap gap-1.5 mb-4">
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Laravel
+                9</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">MySQL</span>
+              <span
+                class="tech-badge text-[10px] px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900/50">Bootstrap
+                4</span>
+            </div>
+
+            <!-- Action Links -->
+            <div class="project-links pt-3 border-t border-slate-100 dark:border-slate-800/80 flex justify-between">
+              <a href="#"
+                class="project-link text-xs font-semibold text-slate-400 hover:text-purple-500 flex items-center gap-1.5 transition">
+                <i class="fas fa-info-circle"></i> Details View
+              </a>
+              <a href="https://montgomeryequipments.com" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="projects" class="space-y-6">
-      <h2 class="text-2xl font-bold text-secondary flex items-center gap-2 border-b pb-2">
-        <i class="fas fa-layer-group text-primary"></i> Selected Technical Projects
+    <!-- Bento 7: Education Card (Spans 1 column) -->
+    <div class="bento-card bento-indigo">
+      <h2 class="section-title text-slate-900 dark:text-white mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 inline-block mr-1">
+          <path d="M22 10l-10-5-10 5 10 5z"></path>
+          <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+        </svg>
+        Education
       </h2>
+      <div class="credential-list space-y-4">
+        <div class="credential-item">
+          <h4 class="text-slate-800 dark:text-slate-200 font-bold">B.Sc. Computing & IS</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Daffodil International Univ.</p>
+          <span class="text-slate-500 text-xs mt-1 inline-block">CGPA: 3.77 | 2019</span>
+        </div>
+        <div class="credential-item">
+          <h4 class="text-slate-800 dark:text-slate-200 font-bold">HSC (Science)</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">S.K.N.I Degree College</p>
+          <span class="text-slate-500 text-xs mt-1 inline-block">GPA: 4.40 | 2013</span>
+        </div>
+      </div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Project 1 -->
-        <div
-          class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-slate-800">Housebrands</h3>
-            <a href="#" class="text-sm font-medium text-primary hover:underline flex items-center gap-1"><i
-                class="fas fa-external-link-alt"></i> View</a>
+    <!-- Bento 8: Certifications Card (Spans 1 column) -->
+    <div class="bento-card bento-emerald">
+      <h2 class="section-title text-slate-900 dark:text-white mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 inline-block mr-1">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        Certifications
+      </h2>
+      <div class="credential-list space-y-4">
+        <div class="credential-item">
+          <h4 class="text-slate-800 dark:text-slate-200 font-bold">Growth Leadership Award</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Mediusware (2024)</p>
+        </div>
+        <div class="credential-item">
+          <h4 class="text-slate-800 dark:text-slate-200 font-bold">PHP with Laravel</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">BITM, Dhaka (2018)</p>
+        </div>
+        <div class="credential-item">
+          <h4 class="text-slate-800 dark:text-slate-200 font-bold">Computer Software</h4>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">inventIT, Sylhet (2011)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento 9: Personal Details Card (Spans 1 column) -->
+    <div class="bento-card bento-purple">
+      <h2 class="section-title text-slate-900 dark:text-white mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 inline-block mr-1">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        Personal Info
+      </h2>
+      <div class="info-list space-y-3 text-sm">
+        <div class="info-list-item flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+          <span class="label text-slate-850 dark:text-slate-200 font-medium">Date of Birth:</span>
+          <span class="val text-slate-600 dark:text-slate-300">June 30, 1996</span>
+        </div>
+        <div class="info-list-item flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+          <span class="label text-slate-850 dark:text-slate-200 font-medium">Nationality:</span>
+          <span class="val text-slate-600 dark:text-slate-300">Bangladeshi</span>
+        </div>
+        <div class="info-list-item flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+          <span class="label text-slate-850 dark:text-slate-200 font-medium">Marital Status:</span>
+          <span class="val text-slate-600 dark:text-slate-300">Unmarried</span>
+        </div>
+        <div class="info-list-item flex justify-between pb-1">
+          <span class="label text-slate-855 dark:text-slate-200 font-medium">Languages:</span>
+          <span class="val text-slate-600 dark:text-slate-300 text-right">Bengali (Native)<br>English
+            (Professional)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento 10: Contact Section & Form (Spans 3 columns/full width) -->
+    <section id="contact" class="bento-card bento-cyan md:col-span-3">
+      <div class="section-header">
+        <h2 class="section-title text-slate-900 dark:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          Get In Touch
+        </h2>
+      </div>
+
+      <div class="contact-layout mt-6">
+        <div class="contact-quick">
+          <div class="contact-item">
+            <div class="contact-icon text-cyan-500">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h4 class="text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider font-bold">Email Address
+              </h4>
+              <p><a href="mailto:rayhan.mahmud.me@gmail.com"
+                  class="text-slate-800 dark:text-slate-100 hover:text-cyan-500 transition text-sm">rayhan.mahmud.me@gmail.com</a>
+              </p>
+            </div>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded">Laravel 11</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Next.js</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">TypeScript</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Tailwind CSS</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">MySQL</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">AWS EC2 & S3</span>
+
+          <div class="contact-item">
+            <div class="contact-icon text-cyan-500">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h4 class="text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider font-bold">Current Location
+              </h4>
+              <p class="text-slate-800 dark:text-slate-100 text-sm">Mohammadpur, Dhaka</p>
+            </div>
           </div>
-          <p class="text-sm text-slate-600 mb-3">A multi-tenant SaaS marketplace and project management platform
-            designed for interior designers, home brands, and clients.</p>
-          <ul class="list-disc list-inside text-xs text-slate-500 space-y-1 mt-auto">
-            <li>AI & Design Tools: Product Clipper browser extension, AI room design generator.</li>
-            <li>Operations & Tracking: Kanban-style project/task management, billable hours.</li>
-            <li>E-commerce & SaaS: Multi-tenant billing, client-designer marketplace.</li>
-          </ul>
         </div>
 
-        <!-- Project 2 -->
-        <div
-          class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-slate-800">GymNest</h3>
-            <a href="#" class="text-sm font-medium text-primary hover:underline flex items-center gap-1"><i
-                class="fas fa-external-link-alt"></i> View</a>
-          </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded">Laravel</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">React.js</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Inertia</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">TypeScript</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Tailwind CSS</span>
-          </div>
-          <p class="text-sm text-slate-600 mb-3">A modern, multi-branch gym management system.</p>
-          <ul class="list-disc list-inside text-xs text-slate-500 space-y-1 mt-auto">
-            <li>Core Management: Multi Branch support, Member & Membership Management.</li>
-            <li>Operations: Workout, Diet, Gym Class, Locker & Attendance Management.</li>
-            <li>Business & HR: Product & Sales Management, Payroll and Careers.</li>
-          </ul>
-        </div>
+        <div class="contact-form-container">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label text-slate-850 dark:text-slate-200">Full Name</label>
+              <input type="text" id="name" class="form-input text-slate-900 dark:text-white" placeholder="Your Name"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label text-slate-850 dark:text-slate-200">Email Address</label>
+              <input type="email" id="email" class="form-input text-slate-900 dark:text-white"
+                placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label text-slate-850 dark:text-slate-200">Message</label>
+              <textarea id="message" class="form-input text-slate-900 dark:text-white"
+                placeholder="Let's build something..." required></textarea>
+            </div>
 
-        <!-- Project 3 -->
-        <div
-          class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-slate-800">MoneyNest (Web)</h3>
-            <a href="#" class="text-sm font-medium text-primary hover:underline flex items-center gap-1"><i
-                class="fas fa-external-link-alt"></i> View</a>
-          </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded">Laravel</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">React.js</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Inertia</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">TypeScript</span>
-          </div>
-          <p class="text-sm text-slate-600 mb-3">A modern personal finance and budget management system.</p>
-          <ul class="list-disc list-inside text-xs text-slate-500 space-y-1 mt-auto">
-            <li>Finance: Bank Accounts, Account-wise Transactions, Monthly Budgets.</li>
-            <li>Management: Target Goals, Member Subscriptions, and Personal Loan tracking.</li>
-          </ul>
-        </div>
+            <div id="form-feedback" class="form-feedback"></div>
 
-        <!-- Project 4 -->
-        <div
-          class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-slate-800">MoneyNest (Mobile App)</h3>
-            <a href="#" class="text-sm font-medium text-primary hover:underline flex items-center gap-1"><i
-                class="fas fa-external-link-alt"></i> View</a>
-          </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded">Flutter</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Dart</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">REST API</span>
-          </div>
-          <p class="text-sm text-slate-600 mb-3">Companion mobile application for the MoneyNest finance platform.</p>
-          <ul class="list-disc list-inside text-xs text-slate-500 space-y-1 mt-auto">
-            <li>Core Features: Secure API synchronization, intuitive budget visualization, and on-the-go expense and
-              transaction tracking.</li>
-          </ul>
-        </div>
-
-        <!-- Project 5 -->
-        <div
-          class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow md:col-span-2">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-slate-800">Montgomery Equipments</h3>
-            <a href="https://montgomeryequipments.com" target="_blank"
-              class="text-sm font-medium text-primary hover:underline flex items-center gap-1"><i
-                class="fas fa-external-link-alt"></i> Link</a>
-          </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded">Laravel 9</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">MySQL</span>
-            <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-1 rounded">Bootstrap 4</span>
-          </div>
-          <p class="text-sm text-slate-600 mb-3">Developed e-commerce infrastructure and managed comprehensive database
-            systems for equipment sales.</p>
+            <button type="submit" class="btn-submit text-white font-bold bg-cyan-500">Submit Message</button>
+          </form>
         </div>
       </div>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      <!-- Education -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-        <h2 class="text-lg font-bold text-secondary flex items-center gap-2 border-b pb-2 mb-4">
-          <i class="fas fa-graduation-cap text-primary"></i> Education
-        </h2>
-        <div class="space-y-4">
-          <div>
-            <h4 class="font-semibold text-slate-800">B.Sc Computing & IS</h4>
-            <p class="text-sm text-slate-600">Daffodil International Univ.</p>
-            <p class="text-xs text-slate-500 font-medium">CGPA: 3.77 | 2019</p>
-          </div>
-          <div>
-            <h4 class="font-semibold text-slate-800">HSC (Science)</h4>
-            <p class="text-sm text-slate-600">S.K.N.I Degree College</p>
-            <p class="text-xs text-slate-500 font-medium">GPA: 4.40 | 2013</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Certifications -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-        <h2 class="text-lg font-bold text-secondary flex items-center gap-2 border-b pb-2 mb-4">
-          <i class="fas fa-certificate text-primary"></i> Certifications
-        </h2>
-        <div class="space-y-4">
-          <div>
-            <h4 class="font-semibold text-slate-800">Growth Leadership Award</h4>
-            <p class="text-sm text-slate-600">Mediusware (2024)</p>
-          </div>
-          <div>
-            <h4 class="font-semibold text-slate-800">PHP with Laravel</h4>
-            <p class="text-sm text-slate-600">BITM, Dhaka (2018)</p>
-          </div>
-          <div>
-            <h4 class="font-semibold text-slate-800">Computer Software</h4>
-            <p class="text-sm text-slate-600">inventIT, Sylhet (2011)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Personal Info -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-        <h2 class="text-lg font-bold text-secondary flex items-center gap-2 border-b pb-2 mb-4">
-          <i class="fas fa-user text-primary"></i> Personal Info
-        </h2>
-        <ul class="space-y-3 text-sm text-slate-600">
-          <li class="flex justify-between border-b border-gray-50 pb-1">
-            <span class="font-medium text-slate-800">DOB:</span>
-            <span>June 30, 1996</span>
-          </li>
-          <li class="flex justify-between border-b border-gray-50 pb-1">
-            <span class="font-medium text-slate-800">Nationality:</span>
-            <span>Bangladeshi</span>
-          </li>
-          <li class="flex justify-between border-b border-gray-50 pb-1">
-            <span class="font-medium text-slate-800">Marital Status:</span>
-            <span>Unmarried</span>
-          </li>
-          <li class="flex justify-between border-b border-gray-50 pb-1">
-            <span class="font-medium text-slate-800">Languages:</span>
-            <span class="text-right">Bengali (Native)<br>English (Professional)</span>
-          </li>
-        </ul>
-      </div>
-
-    </section>
   </main>
 
-  <footer class="bg-white border-t border-gray-200 py-8 mt-8">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-sm text-slate-500">
-        &copy;
+  <!-- Footer -->
+  <footer class="footer mt-12 py-8 bg-[var(--bg-glass)] border-t border-[var(--border-glass)]">
+    <div class="max-w-[1100px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-slate-500">&copy;
         <script>document.write(new Date().getFullYear())</script> Md. Rayhan Mahmud. All rights reserved.
       </p>
-      <div class="flex space-x-4">
-        <a href="https://github.com/rayhan-m" target="_blank" class="text-gray-400 hover:text-primary transition">
+      <div class="flex space-x-6">
+        <a href="https://github.com/rayhan-m" target="_blank" rel="noopener noreferrer"
+          class="text-slate-400 hover:text-purple-500 transition">
           <span class="sr-only">GitHub</span>
           <i class="fab fa-github text-xl"></i>
         </a>
-        <a href="#" class="text-gray-400 hover:text-primary transition">
+        <a href="#" class="text-slate-400 hover:text-purple-500 transition">
           <span class="sr-only">LinkedIn</span>
           <i class="fab fa-linkedin text-xl"></i>
         </a>
-        <a href="mailto:rayhan.mahmud.me@gmail.com" class="text-gray-400 hover:text-primary transition">
+        <a href="mailto:rayhan.mahmud.me@gmail.com" class="text-slate-400 hover:text-purple-500 transition">
           <span class="sr-only">Email</span>
           <i class="fas fa-envelope text-xl"></i>
         </a>
@@ -475,6 +989,8 @@
     </div>
   </footer>
 
+  <!-- Link JavaScript Logic -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
